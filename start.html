@@ -188,9 +188,26 @@
         <label>Attach your list — or photos of invoices <span class="label-opt">(optional)</span>
           <input type="file" name="attachment" accept=".csv,.xls,.xlsx,.numbers,.pdf,.txt,.png,.jpg,.jpeg,.heic" multiple>
         </label>
-        <label>Or paste customers right here <span class="label-opt">(optional — names + phone or email, any format)</span>
+        <label>Or paste customers right here <span class="label-opt">(optional — name + phone or email, any format)</span>
           <textarea name="pasted_list" rows="5" placeholder="Maria Gonzalez 602-555-0188&#10;Dave R — dave@email.com&#10;Sandra, the big mesquite job on Oak St, 480-555-0123"></textarea>
         </label>
+        <details class="setup-extra">
+          <summary>Got 5 more minutes? Knock out your whole account setup now</summary>
+          <p class="setup-extra-note">All optional — we'll collect anything missing by text. But sending it now means zero back-and-forth later.</p>
+          <label>Your logo <span class="label-opt">(any image file)</span>
+            <input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.webp,.heic,.pdf">
+          </label>
+          <label>Exact legal business name <span class="label-opt">(as it appears on your IRS paperwork — including LLC/Inc)</span>
+            <input type="text" name="legal_name" placeholder="Torres Tree Care LLC">
+          </label>
+          <label>Your EIN letter from the IRS <span class="label-opt">(the SS-4 / CP 575 letter)</span>
+            <input type="file" name="ein_letter" accept=".pdf,.png,.jpg,.jpeg,.heic">
+          </label>
+          <p class="setup-extra-note">Why we ask: phone carriers require proof of your legal business name before we can send texts on your behalf. Having this letter up front is the #1 thing that prevents a week-long approval delay.</p>
+          <label>Business website <span class="label-opt">(if you have one)</span>
+            <input type="text" name="website" inputmode="url" placeholder="torrestree.com">
+          </label>
+        </details>
         <label>Anything we should know? <span class="label-opt">(optional)</span>
           <textarea name="notes" rows="3" placeholder="Best time to call, where your customer info lives, questions…"></textarea>
         </label>
@@ -218,8 +235,9 @@
       <ul class="check-list">
         <li><strong>Within 1 business day</strong> — we clean up your list and draft the review message your customers will get</li>
         <li><strong>You approve it</strong> — one text or email from you, nothing goes out without your OK</li>
-        <li><strong>Requests go out</strong> — and your first new reviews typically land within days</li>
-        <li><strong>Then we talk next steps</strong> — your Google Business Profile, your website, and keeping the reviews coming on every new job</li>
+        <li><strong>One more link</strong> — we'll text you a two-click link to connect your Google Business Profile, so your new reviews actually move you up the rankings</li>
+        <li><strong>Requests go out</strong> — personal, friendly, with your name and brand on them — and your first new reviews typically land within days</li>
+        <li><strong>Then we talk next steps</strong> — your website and keeping the reviews coming automatically on every new job</li>
       </ul>
     </div>
   </section>

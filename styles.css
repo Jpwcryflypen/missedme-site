@@ -430,6 +430,14 @@ details p { padding: 0 0 18px; color: var(--muted); }
 }
 .label-opt { font-weight: 400; color: var(--muted); }
 
+.setup-extra {
+  border: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  border-radius: 10px; background: #fcfbf8;
+  padding: 4px 18px; margin-bottom: 18px;
+}
+.setup-extra summary { font-size: 0.95rem; padding: 12px 0; }
+.setup-extra-note { font-size: 0.85rem; color: var(--muted); margin-bottom: 16px; }
+
 .success-banner {
   background: #e3f3ea; border: 1px solid #bfe3cf; border-radius: var(--radius);
   padding: 22px 26px; margin-top: 28px;
