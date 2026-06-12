@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MissedMe — Google Reviews & Business Profile Management for Service Companies</title>
+  <meta name="description" content="MissedMe gets Google reviews from the customers you already made happy and keeps your Google Business Profile working for you. Built for landscapers, plumbers, electricians, and tree services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">missedme<span>.ai</span></a>
+      <a href="#signup" class="btn btn-primary btn-sm">Claim 25 free reviews</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Reviews &amp; Google Business Profile management for the trades</p>
+        <h1>Your best reviews are sitting in your old job list.</h1>
+        <p class="lead">MissedMe gets reviews from the customers you already made happy — and keeps your Google Business Profile working so locals find you first. Built for landscapers, plumbers, electricians, and tree services.</p>
+        <div class="hero-ctas">
+          <a href="#signup" class="btn btn-primary">Claim 25 free reviews</a>
+          <a href="#how" class="btn btn-ghost">See how it works</a>
+        </div>
+        <p class="trust-line">No contracts &nbsp;·&nbsp; Real customers only &nbsp;·&nbsp; Never a fake review</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="review-card card-back">
+          <div class="review-head">
+            <div class="avatar">M</div>
+            <div>
+              <div class="review-name">Maria G.</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p>Crew showed up on time, cleaned everything up, yard looks brand new.</p>
+        </div>
+        <div class="review-card card-mid">
+          <div class="review-head">
+            <div class="avatar av-2">D</div>
+            <div>
+              <div class="review-name">Dave R.</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p>Fixed our panel same week we called. Fair price, no surprises.</p>
+        </div>
+        <div class="review-card card-front">
+          <div class="review-head">
+            <div class="avatar av-3">S</div>
+            <div>
+              <div class="review-name">Sandra K.</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p>Took down two huge mesquites without touching the fence. Recommending to the whole street.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section section-dark" id="problem">
+    <div class="container">
+      <h2>The work happened. The internet can't see it.</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="info-num">01</div>
+          <h3>The map pack decides who gets the call</h3>
+          <p>When someone searches "plumber near me," Google shows three businesses at the top. How many reviews you have — and how recent they are — is a big part of who makes that list.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-num">02</div>
+          <h3>The side-by-side you keep losing</h3>
+          <p>Two companies, same trade, same town. One has 47 reviews, the other has 9. The homeowner doesn't call both — they call the one with proof.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-num">03</div>
+          <h3>Hundreds of happy customers, a handful of reviews</h3>
+          <p>You've finished the jobs. The customers were happy. But almost nobody leaves a review on their own — not because they wouldn't, but because nobody asked them the right way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS — scroll-driven profile demo -->
+  <section class="section scrolly" id="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="section-sub">Keep scrolling. The profile on the right is what happens when somebody finally asks.</p>
+      <div class="scrolly-grid">
+        <div class="scrolly-steps">
+          <div class="s-step" data-step="0">
+            <div class="step-num">1</div>
+            <h3>This is you today</h3>
+            <p>Solid work, happy customers — and a profile stuck at a handful of reviews. The map pack can't see you, so neither can the next customer.</p>
+          </div>
+          <div class="s-step" data-step="1">
+            <div class="step-num">2</div>
+            <h3>We ask every past customer</h3>
+            <p>You send us your finished-job list. We send friendly, personal review requests on your behalf — people you already made happy, finally given an easy way to say so. Your first 25 are free. No list? No problem — we'll help you build one.</p>
+          </div>
+          <div class="s-step" data-step="2">
+            <div class="step-num">3</div>
+            <h3>Reviews land. You climb. It doesn't stop.</h3>
+            <p>More stars, more recent activity, more proof. And once we've worked through your past customers, every new job gets the same ask — so the reviews keep coming as long as you keep working.</p>
+          </div>
+        </div>
+        <div class="scrolly-sticky">
+          <div class="gcard" id="gcard">
+            <div class="gcard-head">
+              <div class="gcard-logo">YC</div>
+              <div>
+                <div class="gcard-name">Your Company LLC</div>
+                <div class="gcard-cat">Plumber · Your Town, USA</div>
+              </div>
+            </div>
+            <div class="gcard-rating">
+              <span class="gcard-num" id="ratingNum">3.9</span>
+              <span class="gstars">
+                <span class="gstars-bg">★★★★★</span>
+                <span class="gstars-fill" id="starsFill">★★★★★</span>
+              </span>
+              <span class="gcard-count" id="reviewCount">(9 reviews)</span>
+            </div>
+            <div class="gcard-rank rank-low" id="rankBadge">Page 2 of results — invisible</div>
+            <div class="gcard-ticker" id="ticker">
+              <div class="tick" data-at="0.40"><span class="tick-stars">★★★★★</span> New review from Maria G.</div>
+              <div class="tick" data-at="0.55"><span class="tick-stars">★★★★★</span> New review from Dave R.</div>
+              <div class="tick" data-at="0.70"><span class="tick-stars">★★★★★</span> New review from Sandra K.</div>
+            </div>
+          </div>
+          <p class="gcard-caption">Illustration — every business starts from a different spot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="section section-offer" id="offer">
+    <div class="container">
+      <div class="offer-box">
+        <p class="eyebrow eyebrow-light">The deal</p>
+        <h2>Your first 25 reviews are on us.</h2>
+        <p class="offer-text">Sign up and we go to work on your past customers. If we don't get you 25 new Google reviews in your first month, <strong>we keep working free until we do.</strong> If your customers blow past 25? They're all yours. No catch, no contract.</p>
+        <a href="#signup" class="btn btn-light">Claim my 25 free reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GBP MANAGEMENT -->
+  <section class="section" id="profile">
+    <div class="container">
+      <h2>Then we make your profile impossible to ignore.</h2>
+      <p class="section-sub">Reviews get you noticed. A managed Google Business Profile keeps you there. We handle the upkeep most owners never have time for:</p>
+      <ul class="check-list">
+        <li>Fresh job photos uploaded regularly — Google favors active profiles</li>
+        <li>Weekly posts and updates so your profile never looks abandoned</li>
+        <li>Services and categories set up the way Google actually reads them</li>
+        <li>Questions answered before they cost you a customer</li>
+        <li>Hours, holidays, and service areas kept accurate</li>
+        <li>A plain-English monthly report — what changed, what it did</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="section section-dark" id="who">
+    <div class="container">
+      <h2>Built for the trades</h2>
+      <div class="trade-grid">
+        <div class="trade">Landscaping</div>
+        <div class="trade">Tree service</div>
+        <div class="trade">Plumbing</div>
+        <div class="trade">Electrical</div>
+        <div class="trade">HVAC</div>
+        <div class="trade">Roofing</div>
+        <div class="trade">Painting</div>
+        <div class="trade">Pest control</div>
+      </div>
+      <p class="section-sub center">If your customers find you on Google, this is for you.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <h2>Straight answers</h2>
+      <details>
+        <summary>Is this against Google's rules?</summary>
+        <p>No. We only ask your real customers about real jobs you actually completed. Every customer gets the same ask — no filtering, no incentives, no fake or purchased reviews, ever. That stuff gets profiles suspended, and we don't touch it.</p>
+      </details>
+      <details>
+        <summary>Do I have to do anything?</summary>
+        <p>Send us your customer list and approve the message we'll send. That's it. You keep doing the work — we handle the rest. As new jobs wrap up, those customers get the same ask, so it keeps running without you thinking about it.</p>
+      </details>
+      <details>
+        <summary>What if I don't have a customer list?</summary>
+        <p>Plenty of companies run on paper invoices and a phone full of texts — that's fine. We'll help you pull a list together from what you've got: old invoices, texts, emails, job notes. Then we set up a dead-simple way to capture every customer going forward. Not having a list isn't a dealbreaker — it's usually the first thing we fix.</p>
+      </details>
+      <details>
+        <summary>What if a customer had a bad experience?</summary>
+        <p>It happens to every company. We flag responses so you can follow up personally — most unhappy customers just want to be heard, and a good follow-up often turns them around. What we won't do is hide them from the ask. Every real customer gets the same invitation.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>It's a simple monthly service with no contract — and your first 25 reviews are free either way. Leave your info below and we'll walk you through it.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="section section-signup" id="signup">
+    <div class="container container-narrow">
+      <h2>Get your 25 free reviews</h2>
+      <p class="section-sub center">Leave your info and we'll reach out — usually same day.</p>
+      <!-- Swap action to your GHL form endpoint when ready. formsubmit.co emails submissions after one-time activation. -->
+      <form class="signup-form" action="https://formsubmit.co/john@missedme.ai" method="POST">
+        <input type="hidden" name="_subject" value="New MissedMe signup">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-row">
+          <label>Your name
+            <input type="text" name="name" required autocomplete="name" placeholder="Mike Torres">
+          </label>
+          <label>Business name
+            <input type="text" name="business" required autocomplete="organization" placeholder="Torres Tree Care">
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Trade
+            <select name="trade" required>
+              <option value="" disabled selected>Pick one</option>
+              <option>Landscaping</option>
+              <option>Tree service</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>HVAC</option>
+              <option>Roofing</option>
+              <option>Painting</option>
+              <option>Pest control</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="(602) 555-0134">
+          </label>
+        </div>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" placeholder="mike@torrestree.com">
+        </label>
+        <button type="submit" class="btn btn-primary btn-full">Claim my 25 free reviews</button>
+        <p class="form-fine">No contract. No spam. We'll reach out once to get you set up.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="logo logo-footer">missedme<span>.ai</span></span>
+        <p>Google reviews &amp; Business Profile management for service companies.</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:john@missedme.ai">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>© 2026 MissedMe LLC · Phoenix, AZ. MissedMe is not affiliated with Google. Google and Google Business Profile are trademarks of Google LLC.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
