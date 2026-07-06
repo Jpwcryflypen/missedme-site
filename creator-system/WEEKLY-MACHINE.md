@@ -10,7 +10,8 @@ One batch day + scraps. The only streak metric that counts: **batch days complet
 ## Batch Day (~4 hrs, same day every week — protect it like a flight)
 
 ### Block 1 — Package (45 min) — BEFORE anything else
-- [ ] Pick 2 video ideas (from trend brief news pegs, the evergreen list, or community questions)
+- [ ] **First source: this week's agent conversation.** If a real pain point came up (coffee call, text, comment), the Case of the Week is the main video — see AGENT-BRAIN.md §3. Trend pegs and the evergreen bank are the backup, not the default.
+- [ ] Pick 2 video ideas (case of the week + one from trend brief / evergreen bank)
 - [ ] Run **research-assistant** topic research on the main one
 - [ ] Write title (<50 chars) + thumbnail concept for both. **If you can't make it clickable, it's not a video idea — swap it now, not after recording.**
 - Title rules: clear over clever, specific numbers, honest superlatives. Thumbnail: max 3 elements (your face + emotion, one object, ≤3 words).

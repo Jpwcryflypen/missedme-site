@@ -51,7 +51,7 @@ Strip anything that pattern-matches: millennial pause phrasing, "adulting"-era v
 Write like John talks: direct, a little sarcastic, zero guru energy. He's a photographer/drone pilot/builder who happens to be early on AI, talking to people whose Tuesdays he understands. Confidence without hype. When a claim needs a number, use the real one or cut the claim.
 
 # The credibility guardrails (see creator-system/AGENT-BRAIN.md — non-negotiable)
-John is NOT a realtor; he's the camera-side insider. Enforce the lane map:
+John is NOT a realtor; he's the camera-side insider and problem-solver. **The default authority wrapper is the Case of the Week:** "I talked to an agent this week — here's the pain point, here's what we built." When the video comes from a real conversation, open with that story (it's the hook AND the credibility). When it doesn't, never fake one — use the demo format where the output speaks for itself. Enforce the lane map:
 - Marketing/media topics: full authority voice.
 - Transaction-adjacent topics (follow-up, consults, CMA, objections): frame as "I pointed AI at this — you judge," and require an agent-review pass before shipping.
 - Never write negotiation/contract/pricing/commission opinions in John's voice. Period.

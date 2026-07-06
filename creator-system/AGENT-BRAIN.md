@@ -28,7 +28,18 @@ negotiation strategy · contracts/addenda/legal · commission structures · pric
 
 Note this is fine for the plan: the week-one picks are already in-lane ("ChatGPT Has Never Heard of You" = visibility/reviews; "robot listing descriptions" = copy). Offers #5 (Objection Gym) and #9 (CMA Storyteller) move to month 2+, after immersion and agent feedback.
 
-## 3. The two-week immersion (≤30 min/day, most of it done FOR you)
+## 3. The Case of the Week (the PRIMARY engine — this is the model)
+
+John's actual working style, formalized: he doesn't need to know the pain points in advance — he needs ONE real conversation, and he can work any problem from there. That's the content engine:
+
+1. **Talk to one agent this week** (coffee call, text thread, comment reply, someone from a shoot). Capture one pain point in their words.
+2. **Work the solve** with the AI agents — build the prompt/workflow/demo that addresses it. Learning it IS the prep; if he built it, he can explain it.
+3. **Film it as the story it is:** "I talked to an agent this week. Here's what's eating her week. I'd never thought about it from her side — so we built this. Watch." Credit the agent (with permission) or anonymize.
+4. **The phone-call answer writes itself,** because it's just the true story: "Yeah — I worked through exactly that with an agent last week; here's what we did."
+
+Why this is the strongest possible position: the pain point is verifiably real, the learning is visible (nobody can call him a fake expert when the premise is "I'm not the expert — I'm the solver"), every case deepens actual knowledge one layer at a time, and every solve is a mini-consult that becomes a warm workshop prospect later. The evergreen bank is the BACKUP for weeks with no fresh case — not the other way around.
+
+## 3b. The safety net (light, mostly done FOR you — not homework)
 
 - **Pain-point library (research-assistant job, weekly):** the agent digests r/realtors + agent Facebook groups + Inman/HousingWire comment sections and maintains `creator-system/briefs/AGENT-PAIN-POINTS.md` — the 20 things agents complain about in their own words, each with: the vocabulary they use, a one-line explanation, and whether it's in-lane. John reads it; 10 minutes a week. Their words become hooks; their complaints become the curriculum.
 - **Five coffee calls (the highest-ROI item in this whole system):** John knows hundreds of agents from 15 years of shoots. Call five. One question: "Walk me through what ate your week." Take notes. This is simultaneously: market research, the first five community members, the first five workshop prospects, and the answer bank for every future phone call. Do 1–2 per week, ongoing.
