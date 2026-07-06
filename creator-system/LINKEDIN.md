@@ -31,7 +31,7 @@
 
 > Fifteen years photographing real estate. Thousands of listings, national ad spots for Apartments.com, LoopNet, and Homes.com, and these days architectural work at CoStar Group, where I spend my time making buildings look like themselves.
 >
-> Lately, the after-hours curiosity has been AI. Not the keynote version, the Tuesday version: can it write a listing description that doesn't sound like a robot? Can it turn one photo shoot into a month of marketing? Can it make a 40-page inspection report readable for an actual human? I test these workflows on the work I've done my whole career, and I share what holds up, on camera, mistakes left in.
+> Lately, the after-hours curiosity has been AI. Not the big "AI will change everything" talk. The practical stuff: can it write a listing description that doesn't sound like a robot? Can it turn one photo shoot into a month of marketing? Can it make a 40-page inspection report readable for an actual human? I test these workflows on the work I've done my whole career, and I share what holds up, on camera, mistakes left in.
 >
 > I'm also a FAA-certified drone pilot, a photographer who watched "professional vs. amateur" get blurry and decided to be on the interesting side of the blur, and someone with ADHD who uses AI as the executive function I wasn't issued. If a workflow doesn't survive a distracted brain and a two-week attention span, I don't post it.
 >
@@ -65,11 +65,11 @@ Everything that matters: the 360Brew algorithm scores posts against the headline
 
 ### About
 
-> I spent fifteen years photographing real estate: CoStar, national ad spots for Apartments.com, LoopNet, and Homes.com, thousands of listings, my own studio (Land and Air Photography). I know what an agent's Tuesday actually looks like, because I was standing in the living room at 8am while they juggled three closings from the driveway.
+> I spent fifteen years photographing real estate: CoStar, national ad spots for Apartments.com, LoopNet, and Homes.com, thousands of listings, my own studio (Land and Air Photography). I know what an agent's day actually looks like, because I was standing in the living room at 8am while they juggled three closings from the driveway.
 >
 > Now I build with AI, and I teach the people I've worked alongside my whole career how to use it.
 >
-> Not "AI is going to change everything" keynote stuff. The Tuesday stuff: the listing description done in ten minutes. The follow-up sequence that writes itself. The inspection report your client actually understands. The review pipeline that runs without you begging anyone. I liked that problem so much I built a company for it: MissedMe.ai, Google reviews and profile management for service businesses.
+> Not the "AI is going to change everything" speech. The practical stuff: the listing description done in ten minutes. The follow-up sequence that writes itself. The inspection report your client actually understands. The review pipeline that runs without you begging anyone. I liked that problem so much I built a company for it: MissedMe.ai, Google reviews and profile management for service businesses.
 >
 > I'm also a FAA-certified drone pilot, a photographer who watched "professional vs. amateur" get blurry and decided to be on the interesting side of the blur, and someone with ADHD who uses AI as the executive function I wasn't issued. That last part shapes everything I teach: if a workflow doesn't survive a distracted brain and a two-week attention span, I don't recommend it.
 >
