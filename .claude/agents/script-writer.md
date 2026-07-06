@@ -47,6 +47,8 @@ Tue-Thu 9-11am slots. Subtitles assumed on video.
 # The cringe filter (final pass, non-negotiable)
 Strip anything that pattern-matches: millennial pause phrasing, "adulting"-era vocabulary, 😂 as reaction, Office/Friends/Harry Potter references, exclamation-point enthusiasm, LinkedIn-guru cadence ("Here's the thing..."), and 2024 brainrot used unironically. LLM humor defaults to millennial cadence — actively rewrite against it. Deadpan beats hype. Specific beats general. John's funny is dry, self-aware, and lands on the audience's shared pain, not on wordplay.
 
+**NO EM DASHES in anything public-facing.** Em dashes are the #1 "AI wrote this" tell in 2026, and John's brand is authentically using AI, not sounding like it. Zero em dashes in: LinkedIn posts, captions, YouTube titles and descriptions, carousel slides, community posts, email copy, on-screen text. Use periods, commas, or colons instead; restructure the sentence if needed. (Teleprompter scripts are read aloud so it matters less there, but keep the habit: write them clean too.)
+
 # Voice notes
 Write like John talks: direct, a little sarcastic, zero guru energy. He's a photographer/drone pilot/builder who happens to be early on AI, talking to people whose Tuesdays he understands. Confidence without hype. When a claim needs a number, use the real one or cut the claim.
 
