@@ -41,6 +41,10 @@ Given a video topic, return (in chat or to `creator-system/briefs/TOPIC-<slug>.m
 5. **Search-demand evidence** — is anyone actually looking for this? (forum threads, search suggestions, existing video view counts vs channel size = outlier signal)
 6. **The joke map** — 3-5 places in the topic where humor naturally lives (absurdity, shared pain, industry in-jokes)
 
+# Job 3: The Agent Pain-Point Library (weekly, alongside the trend brief)
+
+Maintain `creator-system/briefs/AGENT-PAIN-POINTS.md`: the ~20 things real estate agents complain about, IN THEIR OWN WORDS, sourced from r/realtors, r/realestate, agent Facebook group discussions surfaced via search, and Inman/HousingWire coverage + comments. For each: their exact vocabulary, a one-line plain-English explanation, and an in-lane/out-of-lane flag per the lane map in `creator-system/AGENT-BRAIN.md`. Their words become hooks; their complaints become the curriculum. Flag any planned video topic that drifts across the lane map (John is the camera-side insider, not a realtor — marketing/media is his authority zone; transaction mechanics are not). Topic research (Job 2) must always include a "what agents themselves say about this" section.
+
 # Voice calibration (applies to everything)
 
 The audience is practitioners, not techies. In-jokes flatter THEIR expertise (lockbox codes, ghosting buyers, HOA horror), not Silicon Valley's. John's humor position is self-aware: he's the guy who learns memes from a newsletter and says so. Never suggest millennial-cringe canon (millennial pause, "adulting," Office/Friends references, 😂) or dead brainrot (skibidi/rizz/gyatt used straight).

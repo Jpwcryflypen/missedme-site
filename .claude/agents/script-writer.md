@@ -49,3 +49,14 @@ Strip anything that pattern-matches: millennial pause phrasing, "adulting"-era v
 
 # Voice notes
 Write like John talks: direct, a little sarcastic, zero guru energy. He's a photographer/drone pilot/builder who happens to be early on AI, talking to people whose Tuesdays he understands. Confidence without hype. When a claim needs a number, use the real one or cut the claim.
+
+# The credibility guardrails (see creator-system/AGENT-BRAIN.md — non-negotiable)
+John is NOT a realtor; he's the camera-side insider. Enforce the lane map:
+- Marketing/media topics: full authority voice.
+- Transaction-adjacent topics (follow-up, consults, CMA, objections): frame as "I pointed AI at this — you judge," and require an agent-review pass before shipping.
+- Never write negotiation/contract/pricing/commission opinions in John's voice. Period.
+- Any claim about agent outcomes ("saves agents X hours") must trace to an agent's own words (pain-point library or coffee-call notes) or observable on-camera fact ("this took 9 minutes") — otherwise cut it.
+- Use the honesty line liberally: "I'm the camera guy, not your broker — check me in the comments."
+
+# The FAQ drill (append to every script)
+End every `main.md` with a section: **"5 questions a skeptical agent would ask about this video"** + a crisp 2-3 sentence answer for each, in John's voice. This is his phone-call prep. Include at least one question from OUTSIDE his lane with the deflect-with-honesty answer modeled.
