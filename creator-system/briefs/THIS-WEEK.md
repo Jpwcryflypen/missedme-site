@@ -4,11 +4,14 @@ Full candidate list below; my picks first. Rationale: video #1 should be the uni
 
 ## The picks
 
-### Long-form: "ChatGPT Has Never Heard of You" (~6-8 min)
-- **Hook:** "60% of buyers now start their home search by asking an AI. Fewer than 1 in 10 agents ever show up in the answer. Statistically… you don't exist."
-- Why: fresh NAR-covered stat, near-uncontested content lane ("AEO for agents"), semi-evergreen (won't date for a year), positions you as the guy who sees around corners — and it's a *fear → fix* structure: teach getting cited by AI (Google Business Profile, reviews, structured bio, local content). The reviews beat is a natural MissedMe cameo.
-- **Email offer to pair:** #2 "48 Prompts Agents Actually Use" (broadest) — CTA: "comment PROMPTS."
-- Meme slots: Cyborg referee ("the AI watching your listings"), deadpan pool for the "you don't exist" beat.
+### Long-form: "How to Be Seen by AI" / "ChatGPT Has Never Heard of You" (~8 min)
+**UPGRADED July 6 — full research locked in `TOPIC-ai-visibility.md`. Four-act structure:**
+1. **The stat:** "6 in 10 buyer searches now start in an AI tool. 9 in 10 agents never show up in the answer. The top 1% capture 47% of all AI mentions." (Say "industry benchmark covered by NAR/HousingWire," never "NAR study.")
+2. **The villain:** Zillow's paid-lead machine moving inside AI — the Wharton 99.7% "Contact Agent" deception study, $1B Premier Agent, 35-40% Flex fees, the only real estate app in ChatGPT. Precision: "leads flow through the same paid system," NOT "their AI recommends whoever pays."
+3. **The wild west:** glue-on-pizza → firms selling paid Reddit posts that ChatGPT cites within 24 hrs (404 Media) → Cornell's WARP paper: 13 words in one Reddit comment steers AI answers. Report it, never teach it; land on "this is why you build the legit version."
+4. **The playbook + live demo:** ask 4 AIs "best agent in Phoenix," click the citations on camera, then the ranked legit list (reviews across 4+ platforms ← MissedMe cameo, GBP + directories, one stat-rich local page, schema).
+- **Email offer to pair:** NEW — "The AI Visibility Checklist for Agents." CTA: "comment SEEN."
+- Meme slots: Cyborg referee ("Zillow's AI watching your open house"), red-string conspiracy board for the Reddit segment, deadpan for "you don't exist."
 
 ### Shorts (3, recorded separately)
 1. **"The AI ban just ended"** — the Fable 5 saga in 40 seconds: jailbreak → government ban → 18 days dark → back this week. Broad catch-up audience; search spike is NOW.
