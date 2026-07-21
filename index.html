@@ -3,293 +3,363 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MissedMe — Google Reviews & Business Profile Management for Service Companies</title>
-  <meta name="description" content="MissedMe gets Google reviews from the customers you already made happy and keeps your Google Business Profile working for you. Built for landscapers, plumbers, electricians, and tree services.">
+  <title>MissedMe — Practical AI Assessments for Local Businesses</title>
+  <meta name="description" content="MissedMe finds practical AI opportunities that can give local business owners time back, then helps with implementation, missed-call recovery, and Google review growth.">
+  <meta property="og:title" content="MissedMe — Find where AI can give your business time back">
+  <meta property="og:description" content="Practical AI assessments, missed-call recovery, and policy-compliant Google review growth for local businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://missedme.ai/">
+  <meta property="og:image" content="https://missedme.ai/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MissedMe — Practical AI for Local Businesses">
+  <meta name="twitter:description" content="Find the work AI can help your business handle, with a clear plan and optional implementation support.">
+  <meta name="twitter:image" content="https://missedme.ai/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260720-4">
 </head>
 <body>
-
   <header class="nav">
-    <div class="container nav-inner">
-      <a href="#" class="logo">missedme<span>.ai</span></a>
-      <a href="#signup" class="btn btn-primary btn-sm">Claim 25 free reviews</a>
+    <div class="container nav-inner nav-expanded">
+      <a href="#top" class="logo">missedme<span>.ai</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#assessments">Assessments</a>
+        <a href="#services">Other services</a>
+        <a href="#process">How it works</a>
+      </nav>
+      <a href="tel:+16234620164" class="btn btn-primary btn-sm">Call (623) 462-0164</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">For landscapers, plumbers, electricians, roofers, and every trade in between</p>
-        <h1>Your first 25 Google reviews are free. That's the whole pitch.</h1>
-        <p class="lead">You send us your list of past customers and we ask every one of them for an honest review, so you never have to do the begging. If you don't have 25 new Google reviews in your first month, we keep working free until you do. No contract.</p>
-        <div class="hero-ctas">
-          <a href="#signup" class="btn btn-primary">Get my 25 free reviews</a>
-          <a href="#faq" class="btn btn-ghost">Read the fine print first</a>
+  <main id="top">
+    <section class="ai-hero">
+      <div class="container ai-hero-grid">
+        <div>
+          <p class="eyebrow">Practical AI for local businesses</p>
+          <h1>Find where AI can give your business time back.</h1>
+          <p class="lead">We study how your business actually works, identify realistic time-saving opportunities, and give you a prioritized plan. Implement it yourself or hire us to help.</p>
+          <div class="hero-ctas">
+            <a href="#assessments" class="btn btn-primary">Compare assessments</a>
+            <a href="#qualify" class="btn btn-ghost">Check if your business fits</a>
+          </div>
+          <p class="trust-line">Phoenix-based · Clear scope · Implementation is always optional</p>
         </div>
-        <p class="trust-line">No contract &nbsp;·&nbsp; Real customers only &nbsp;·&nbsp; MissedMe LLC, Phoenix AZ</p>
-      </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="review-card card-back">
-          <div class="review-head">
-            <div class="avatar">M</div>
-            <div>
-              <div class="review-name">Maria G.</div>
-              <div class="stars">★★★★★</div>
-            </div>
+        <div class="opportunity-board" aria-label="Example AI opportunity map">
+          <div class="board-topline">
+            <span>Example opportunity</span>
+            <strong>HIGH IMPACT</strong>
           </div>
-          <p>Crew showed up on time, cleaned everything up, yard looks brand new.</p>
-        </div>
-        <div class="review-card card-mid">
-          <div class="review-head">
-            <div class="avatar av-2">D</div>
-            <div>
-              <div class="review-name">Dave R.</div>
-              <div class="stars">★★★★★</div>
-            </div>
+          <div class="workflow-card">
+            <span class="workflow-label">TODAY</span>
+            <strong>Repeatedly drafting customer follow-ups</strong>
+            <small>60–90 minutes across the week</small>
           </div>
-          <p>Fixed our panel same week we called. Fair price, no surprises.</p>
-        </div>
-        <div class="review-card card-front">
-          <div class="review-head">
-            <div class="avatar av-3">S</div>
-            <div>
-              <div class="review-name">Sandra K.</div>
-              <div class="stars">★★★★★</div>
-            </div>
+          <div class="workflow-arrow" aria-hidden="true">↓</div>
+          <div class="workflow-card workflow-card-accent">
+            <span class="workflow-label">POSSIBLE IMPROVEMENT</span>
+            <strong>AI prepares the first draft from your notes</strong>
+            <small>You review, edit, and remain in control</small>
           </div>
-          <p>Took down two huge mesquites without touching the fence. Recommending to the whole street.</p>
+          <p class="board-note">Every recommendation is based on your workflow—not a generic list of AI tools.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROBLEM -->
-  <section class="section section-dark" id="problem">
-    <div class="container">
-      <h2>You've done hundreds of good jobs. Google shows nine.</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <div class="info-num">01</div>
-          <h3>Asking feels greasy</h3>
-          <p>You did the work, the customer was happy, and now you're supposed to text them asking for stars. It feels like begging, so most guys skip it. We do the asking for you, friendly and personal, and you never have to bring it up on a job.</p>
-        </div>
-        <div class="info-card">
-          <div class="info-num">02</div>
-          <h3>Every marketer wants a retainer</h3>
-          <p>Maybe you already paid somebody $2,000 a month and the phone never rang once, so now every pitch sounds like a guy on a beach cashing your checks. Fair enough. That's why this one starts free and stays month to month.</p>
-        </div>
-        <div class="info-card">
-          <div class="info-num">03</div>
-          <h3>One in ten follows through</h3>
-          <p>Even owners who text every customer after the job see maybe one in ten actually leave a review. Your customers mean it, they're just busy. Somebody has to follow up, and you don't have the time.</p>
-        </div>
+    <section class="proof-strip" aria-label="What an assessment provides">
+      <div class="container proof-grid">
+        <div><strong>1</strong><span>Find the work consuming your time</span></div>
+        <div><strong>2</strong><span>Prioritize impact versus effort</span></div>
+        <div><strong>3</strong><span>See the assumptions behind the estimate</span></div>
+        <div><strong>4</strong><span>Choose what—if anything—to implement</span></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HOW IT WORKS — scroll-driven profile demo -->
-  <section class="section scrolly" id="how">
-    <div class="container">
-      <h2>How it works</h2>
-      <p class="section-sub">Keep scrolling. The profile on the right is what happens when somebody finally asks.</p>
-      <div class="scrolly-grid">
-        <div class="scrolly-steps">
-          <div class="s-step" data-step="0">
-            <div class="step-num">1</div>
-            <h3>This is you today</h3>
-            <p>Solid work, happy customers — and a profile stuck at a handful of reviews. The map pack can't see you, so neither can the next customer.</p>
-          </div>
-          <div class="s-step" data-step="1">
-            <div class="step-num">2</div>
-            <h3>We ask every past customer</h3>
-            <p>You send us your finished-job list. We send friendly, personal review requests on your behalf — people you already made happy, finally given an easy way to say so. Your first 25 are free. No list? No problem — we'll help you build one.</p>
-          </div>
-          <div class="s-step" data-step="2">
-            <div class="step-num">3</div>
-            <h3>Reviews land. You climb. It doesn't stop.</h3>
-            <p>More stars, more recent activity, more proof. And once we've worked through your past customers, every new job gets the same ask — so the reviews keep coming as long as you keep working.</p>
-          </div>
-        </div>
-        <div class="scrolly-sticky">
-          <div class="gcard" id="gcard">
-            <div class="gcard-head">
-              <div class="gcard-logo">YC</div>
-              <div>
-                <div class="gcard-name">Your Company LLC</div>
-                <div class="gcard-cat">Plumber · Your Town, USA</div>
-              </div>
+    <section class="section" id="assessments">
+      <div class="container">
+        <p class="eyebrow">AI assessment options</p>
+        <h2>Start with the amount of help you actually need.</h2>
+        <p class="section-sub">The assessment diagnoses and recommends. Tool subscriptions and implementation are separate unless your written order says otherwise.</p>
+
+        <div class="assessment-grid">
+          <article class="price-card">
+            <div class="price-card-head">
+              <span class="package-tag">ONE PRIORITY WORKFLOW</span>
+              <h3>Quick Win</h3>
+              <p class="price"><sup>$</sup>199</p>
             </div>
-            <div class="gcard-rating">
-              <span class="gcard-num" id="ratingNum">3.9</span>
-              <span class="gstars">
-                <span class="gstars-bg">★★★★★</span>
-                <span class="gstars-fill" id="starsFill">★★★★★</span>
-              </span>
-              <span class="gcard-count" id="reviewCount">(9 reviews)</span>
+            <p>For an owner who already knows which recurring task is eating time.</p>
+            <ul>
+              <li>Focused online intake</li>
+              <li>Analysis of one workflow</li>
+              <li>One recommended improvement</li>
+              <li>Written self-implementation plan</li>
+              <li>Delivered within 3 business days of complete intake</li>
+              <li>Target: 1+ projected hour per week</li>
+            </ul>
+            <p class="package-note">Recommendations only; implementation is priced separately.</p>
+            <a href="#qualify" class="btn btn-ghost btn-full package-link" data-package="$199 Quick Win">Start the fit check</a>
+          </article>
+
+          <article class="price-card price-card-featured">
+            <div class="popular-badge">Most accessible full assessment</div>
+            <div class="price-card-head">
+              <span class="package-tag">ASYNC FULL ASSESSMENT</span>
+              <h3>AI Opportunity Assessment</h3>
+              <p class="price"><sup>$</sup>499</p>
             </div>
-            <div class="gcard-rank rank-low" id="rankBadge">Page 2 of results — invisible</div>
-            <div class="gcard-ticker" id="ticker">
-              <div class="tick" data-at="0.40"><span class="tick-stars">★★★★★</span> New review from Maria G.</div>
-              <div class="tick" data-at="0.55"><span class="tick-stars">★★★★★</span> New review from Dave R.</div>
-              <div class="tick" data-at="0.70"><span class="tick-stars">★★★★★</span> New review from Sandra K.</div>
+            <p>For a business that wants several opportunities prioritized without live consulting.</p>
+            <ul>
+              <li>Detailed business and workflow intake</li>
+              <li>3–7 prioritized opportunities</li>
+              <li>Effort-versus-impact ranking</li>
+              <li>Written self-implementation roadmap</li>
+              <li>Delivered within 5 business days of complete intake</li>
+              <li>Target: 2.5+ projected hours per week</li>
+            </ul>
+            <p class="package-note">Recommendations only; implementation and live calls are separate.</p>
+            <a href="#qualify" class="btn btn-primary btn-full package-link" data-package="$499 AI Opportunity Assessment">Check $499 fit</a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-card-head">
+              <span class="package-tag">LIVE + PERSONALIZED</span>
+              <h3>Personalized Assessment</h3>
+              <p class="price"><sup>$</sup>999</p>
             </div>
+            <p>For an owner who wants live discovery, a personalized report, and help deciding what comes next.</p>
+            <ul>
+              <li>Up to 45-minute live discovery session</li>
+              <li>3–7 personalized, prioritized opportunities</li>
+              <li>Projected time and financial impact</li>
+              <li>Full prioritized roadmap</li>
+              <li>Up to 30-minute live report-review session</li>
+              <li>Delivered within 5 business days of discovery</li>
+              <li>Target: 5+ projected hours per week</li>
+            </ul>
+            <p class="package-note">Recommendations only; implementation is priced separately.</p>
+            <a href="#qualify" class="btn btn-ghost btn-full package-link" data-package="$999 Personalized Assessment">Request a qualification call</a>
+          </article>
+        </div>
+
+        <div class="guarantee-box">
+          <div class="guarantee-mark" aria-hidden="true">✓</div>
+          <div>
+            <h3>The assessment-fit guarantee</h3>
+            <p>If we cannot identify qualifying opportunities totaling the projected weekly time savings stated for your package, we will not deliver the final assessment and will refund the assessment fee.</p>
+            <small>This guarantees opportunities identified—not hours automatically realized. Estimates use the workflow information you provide. Actual results depend on implementation, adoption, work volume, tools, and staff behavior. <a href="refunds.html">Read the complete guarantee and refund terms.</a></small>
           </div>
-          <p class="gcard-caption">Illustration — every business starts from a different spot.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OFFER -->
-  <section class="section section-offer" id="offer">
-    <div class="container">
-      <div class="offer-box">
-        <p class="eyebrow eyebrow-light">Here's the deal</p>
-        <h2>25 reviews in your first month, or we keep working free.</h2>
-        <p class="offer-text">Send us your past customer list, or we'll help build one from old invoices and texts. Every real customer gets the same ask, good job or bad. No incentives and no fakes, so it stays inside Google's rules. <strong>Your first 25 cost nothing</strong>, which means you've watched it work before you ever pay a dime. Month to month after that, and you can walk whenever.</p>
-        <a href="#signup" class="btn btn-light">Claim my 25 free reviews</a>
+    <section class="section section-dark" id="services">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">Other ways to recover missed opportunities</p>
+        <h2>Time is only one thing a business can miss.</h2>
+        <p class="section-sub">These services can stand alone or become an implementation recommendation after an assessment.</p>
+        <div class="support-grid">
+          <article class="support-card">
+            <span class="support-number">01</span>
+            <h3>Missed-call recovery</h3>
+            <p>Route business calls to the right person, alert your team when a call is missed, and build a consent-aware text-back or assisted callback process around carrier requirements so good leads do not disappear.</p>
+            <ul>
+              <li>Call-flow review and forwarding setup</li>
+              <li>Missed-call alerts and response design</li>
+              <li>Optional text-back after consent and carrier registration</li>
+              <li>Usage and platform costs disclosed before setup</li>
+            </ul>
+            <a href="#qualify" class="text-link package-link" data-package="Missed-call recovery">Ask about missed-call recovery →</a>
+          </article>
+
+          <article class="support-card">
+            <span class="support-number">02</span>
+            <h3>Google review growth</h3>
+            <p>Install a consistent process for requesting honest feedback from real customers and keeping your Google Business Profile accurate and active.</p>
+            <ul>
+              <li>No fake reviews, incentives, or review gating</li>
+              <li>Review-request workflow and follow-up</li>
+              <li>Profile categories, services, hours, and updates</li>
+              <li>No promises of a specific ranking or review count</li>
+            </ul>
+            <a href="#qualify" class="text-link package-link" data-package="Google review and Business Profile growth">Request a profile check →</a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GBP MANAGEMENT -->
-  <section class="section" id="profile">
-    <div class="container">
-      <h2>Then we make your profile impossible to ignore.</h2>
-      <p class="section-sub">Reviews get you noticed. A managed Google Business Profile keeps you there. We handle the upkeep most owners never have time for:</p>
-      <ul class="check-list">
-        <li>Fresh job photos uploaded regularly — Google favors active profiles</li>
-        <li>Weekly posts and updates so your profile never looks abandoned</li>
-        <li>Services and categories set up the way Google actually reads them</li>
-        <li>Questions answered before they cost you a customer</li>
-        <li>Hours, holidays, and service areas kept accurate</li>
-        <li>A plain-English monthly report — what changed, what it did</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- WHO IT'S FOR -->
-  <section class="section section-dark" id="who">
-    <div class="container">
-      <h2>Built for the trades</h2>
-      <div class="trade-grid">
-        <div class="trade">Landscaping</div>
-        <div class="trade">Tree service</div>
-        <div class="trade">Plumbing</div>
-        <div class="trade">Electrical</div>
-        <div class="trade">HVAC</div>
-        <div class="trade">Roofing</div>
-        <div class="trade">Painting</div>
-        <div class="trade">Pest control</div>
+    <section class="section" id="process">
+      <div class="container">
+        <p class="eyebrow">How an assessment works</p>
+        <h2>Diagnosis first. Tools second.</h2>
+        <div class="process-grid">
+          <article><span>1</span><h3>Qualify</h3><p>Confirm that your business has enough recurring digital or administrative work to analyze.</p></article>
+          <article><span>2</span><h3>Discover</h3><p>Document the work as it happens today, beginning with your highest-priority task.</p></article>
+          <article><span>3</span><h3>Analyze</h3><p>Compare realistic improvements by time, effort, cost, risk, and expected impact.</p></article>
+          <article><span>4</span><h3>Deliver</h3><p>Receive a clear recommendation and action plan with the assumptions shown.</p></article>
+          <article><span>5</span><h3>Decide</h3><p>Implement it yourself, leave it alone, or hire MissedMe for a separate implementation.</p></article>
+        </div>
+        <blockquote class="discovery-question">
+          <span>Our favorite starting question</span>
+          “If you could snap your fingers and have one part of your work handled for you, what would it be?”
+        </blockquote>
       </div>
-      <p class="section-sub center">If your customers find you on Google, this is for you.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container container-narrow">
-      <h2>Straight answers</h2>
-      <details>
-        <summary>Is this against Google's rules?</summary>
-        <p>No. We only ask your real customers about real jobs you actually completed. Every customer gets the same ask — no filtering, no incentives, no fake or purchased reviews, ever. That stuff gets profiles suspended, and we don't touch it.</p>
-      </details>
-      <details>
-        <summary>What does the message to my customer actually say?</summary>
-        <p>Short, plain, and in your voice — nothing salesy. Something like:</p>
-        <p style="margin:10px 0;padding:14px 16px;background:#f6f4ef;border-left:3px solid #c9b896;border-radius:8px;font-style:italic;line-height:1.55;">"Hi Maria, it's the team at Torres Tree Care — thanks again for having us out for the mesquite removal. If you've got 20 seconds, a quick Google review really helps a small shop like ours: [link]. No worries if not. Thanks!"</p>
-        <p>You approve the wording before anything goes out, and your business name is on it, not ours.</p>
-      </details>
-      <details>
-        <summary>What if Google filters some of the reviews?</summary>
-        <p>It happens, usually when a profile jumps from a handful of reviews to a lot in a short stretch. That's why we don't blast everyone at once — we space the asks out over a few weeks so the activity looks like what it is: real customers, a few at a time. Filtered reviews don't count toward your 25. If Google holds some back, we keep working free until 25 are live and sticking.</p>
-      </details>
-      <details>
-        <summary>Do I have to do anything?</summary>
-        <p>Send us your customer list and approve the message we'll send. That's it. You keep doing the work — we handle the rest. As new jobs wrap up, those customers get the same ask, so it keeps running without you thinking about it.</p>
-      </details>
-      <details>
-        <summary>What if I don't have a customer list?</summary>
-        <p>Plenty of companies run on paper invoices and a phone full of texts — that's fine. We'll help you pull a list together from what you've got: old invoices, texts, emails, job notes. Then we set up a dead-simple way to capture every customer going forward. Not having a list isn't a dealbreaker — it's usually the first thing we fix.</p>
-      </details>
-      <details>
-        <summary>What if a customer had a bad experience?</summary>
-        <p>It happens to every company. We flag responses so you can follow up personally — most unhappy customers just want to be heard, and a good follow-up often turns them around. What we won't do is hide them from the ask. Every real customer gets the same invitation.</p>
-      </details>
-      <details>
-        <summary>What does it cost?</summary>
-        <p>It's a simple monthly service with no contract — and your first 25 reviews are free either way. Leave your info below and we'll walk you through it.</p>
-      </details>
-    </div>
-  </section>
+    <section class="section section-soft" id="examples">
+      <div class="container">
+        <p class="eyebrow">What we may examine</p>
+        <h2>Real work—not AI theater.</h2>
+        <div class="example-grid">
+          <span>Email drafting and follow-up</span>
+          <span>Meeting notes and action items</span>
+          <span>Customer intake</span>
+          <span>Estimates and proposals</span>
+          <span>Scheduling and reminders</span>
+          <span>Internal document search</span>
+          <span>Review-request follow-up</span>
+          <span>Missed-call response</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- SIGNUP -->
-  <section class="section section-signup" id="signup">
-    <div class="container container-narrow">
-      <h2>Get your 25 free reviews</h2>
-      <p class="section-sub center">Leave your info and we'll reach out — usually same day.</p>
-      <!-- Swap action to your GHL form endpoint when ready. formsubmit.co emails submissions after one-time activation. -->
-      <form class="signup-form" action="https://formsubmit.co/john@missedme.ai" method="POST">
-        <input type="hidden" name="_subject" value="New MissedMe signup">
-        <input type="hidden" name="_captcha" value="false">
-        <div class="form-row">
-          <label>Your name
-            <input type="text" name="name" required autocomplete="name" placeholder="Mike Torres">
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <p class="eyebrow">Straight answers</p>
+        <h2>Before you spend anything</h2>
+        <details>
+          <summary>Do you build the automation as part of the assessment?</summary>
+          <p>No. The assessment diagnoses, prioritizes, and recommends. If you want help implementing a recommendation, we will define and price that work separately before starting.</p>
+        </details>
+        <details>
+          <summary>What counts as projected time savings?</summary>
+          <p>We start with the frequency and time you report for a recurring workflow, then estimate the portion a practical change could reasonably reduce. The report shows those assumptions so you can challenge them.</p>
+        </details>
+        <details>
+          <summary>What if my business is not a fit?</summary>
+          <p>We will say so. A business needs enough recurring digital or administrative work for the chosen package. If the paid assessment cannot identify the package threshold, the guarantee described above applies.</p>
+        </details>
+        <details>
+          <summary>Are the recommendations always “AI tools”?</summary>
+          <p>No. Sometimes the right answer is a better process, a feature in software you already own, or a simple automation. The goal is useful improvement—not forcing AI into every problem.</p>
+        </details>
+        <details>
+          <summary>Is missed-call text-back already included?</summary>
+          <p>No. Call routing, texting, consent, carrier registration, message handling, and usage costs must be scoped for each business. We will not represent text-back as live until it has been configured and tested.</p>
+        </details>
+        <details>
+          <summary>How are payments handled?</summary>
+          <p>Approved assessments are paid through Stripe-hosted checkout. MissedMe does not receive or store your full card number. Delivery timing and the final scope are confirmed before payment.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section section-signup" id="qualify">
+      <div class="container qualify-grid">
+        <div>
+          <p class="eyebrow">Five-minute fit check</p>
+          <h2>Tell us what your business is missing.</h2>
+          <p class="section-sub">We will tell you whether and how we can help before asking you to move forward. We aim to respond within one business day. You can also call <a href="tel:+16234620164">(623) 462-0164</a>.</p>
+          <div class="fit-note">
+            <strong>For an AI assessment, a useful fit usually has:</strong>
+            <ul>
+              <li>At least one recurring digital or administrative workflow</li>
+              <li>A person who can explain how the work happens today</li>
+              <li>Enough weekly work to support the selected package threshold</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="signup-form qualify-form" action="https://formsubmit.co/john@missedme.ai" method="POST">
+          <input type="hidden" name="_subject" value="New MissedMe assessment fit check">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://missedme.ai/thanks.html">
+          <div class="form-row">
+            <label>Your name
+              <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+            </label>
+            <label>Business name
+              <input type="text" name="business" required autocomplete="organization" placeholder="Your business">
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" placeholder="you@business.com">
+            </label>
+            <label>Phone
+              <input type="tel" name="phone" required autocomplete="tel" placeholder="(623) 555-0123">
+            </label>
+          </div>
+          <label>Website <span class="label-opt">(optional)</span>
+            <input type="url" name="website" autocomplete="url" placeholder="https://yourbusiness.com">
           </label>
-          <label>Business name
-            <input type="text" name="business" required autocomplete="organization" placeholder="Torres Tree Care">
+          <div class="form-row">
+            <label>What are you interested in?
+              <select name="service" id="serviceSelect" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>$199 Quick Win</option>
+                <option>$499 AI Opportunity Assessment</option>
+                <option>$999 Personalized Assessment</option>
+                <option>Missed-call recovery</option>
+                <option>Google review and Business Profile growth</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label id="recurringWorkField">Relevant digital/admin work each week <span class="label-opt">(AI assessments)</span>
+              <select name="weekly_recurring_work" id="weeklyRecurringWork" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Less than 1 hour</option>
+                <option>1–2.5 hours</option>
+                <option>2.5–5 hours</option>
+                <option>5–10 hours</option>
+                <option>More than 10 hours</option>
+                <option>Not applicable to my request</option>
+                <option>Not sure</option>
+              </select>
+            </label>
+          </div>
+          <label>What would you most like handled or improved?
+            <textarea name="priority_workflow" rows="5" required placeholder="For an AI assessment, describe the recurring task and time involved. For another service, tell us what is happening now and what you want to change."></textarea>
           </label>
-        </div>
-        <div class="form-row">
-          <label>Trade
-            <select name="trade" required>
-              <option value="" disabled selected>Pick one</option>
-              <option>Landscaping</option>
-              <option>Tree service</option>
-              <option>Plumbing</option>
-              <option>Electrical</option>
-              <option>HVAC</option>
-              <option>Roofing</option>
-              <option>Painting</option>
-              <option>Pest control</option>
-              <option>Other</option>
-            </select>
+          <label class="consent-row">
+            <input type="checkbox" name="sms_consent" value="yes">
+            <span>Yes, MissedMe may text me about this request at the number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span>
           </label>
-          <label>Phone
-            <input type="tel" name="phone" required autocomplete="tel" placeholder="(602) 555-0134">
+          <label class="consent-row">
+            <input type="checkbox" name="scope_acknowledgment" value="yes" required>
+            <span>I understand this is a request for a fit and scope review. Any paid work, implementation, recurring charges, or usage fees will be confirmed in writing before work begins.</span>
           </label>
-        </div>
-        <label>Email
-          <input type="email" name="email" required autocomplete="email" placeholder="mike@torrestree.com">
-        </label>
-        <button type="submit" class="btn btn-primary btn-full">Claim my 25 free reviews</button>
-        <p class="form-fine">No contract. No spam. We'll reach out once to get you set up.</p>
-      </form>
-    </div>
-  </section>
+          <button type="submit" class="btn btn-primary btn-full">Send my fit check</button>
+          <p class="form-fine">We aim to reply within one business day. We will use this information only to evaluate and respond to your request. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div>
         <span class="logo logo-footer">missedme<span>.ai</span></span>
-        <p>Google reviews &amp; Business Profile management for service companies.</p>
+        <p>Practical AI assessments, missed-call recovery, and Google review growth for local businesses.</p>
+      </div>
+      <div class="footer-contact">
+        <strong>Talk to MissedMe</strong>
+        <a href="tel:+16234620164">(623) 462-0164</a>
+        <a href="mailto:john@missedme.ai">john@missedme.ai</a>
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-        <a href="mailto:john@missedme.ai">Contact</a>
+        <a href="refunds.html">Guarantee &amp; refunds</a>
       </div>
     </div>
     <div class="container footer-legal">
-      <p>© 2026 MissedMe LLC · Phoenix, AZ. MissedMe is not affiliated with Google. Google and Google Business Profile are trademarks of Google LLC.</p>
+      <p>© 2026 MissedMe LLC · Phoenix, Arizona. MissedMe is not affiliated with Google, Anthropic, OpenAI, or other tool providers mentioned in client recommendations.</p>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20260720-4"></script>
 </body>
 </html>
