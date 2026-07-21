@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-21T03:07:39.873Z",
+  "generatedAt": "2026-07-21T03:44:36.837Z",
   "rawRows": 3672,
   "excludedRows": 160,
   "deduplicatedBusinesses": 2835,
   "callableOrEmailableLeads": 2822,
   "byOffer": {
-    "Website": 62,
-    "Reviews": 999,
+    "Website": 59,
+    "Reviews": 1001,
     "AI Fit Call": 32,
-    "Research First": 1729
+    "Research First": 1730
   },
   "byConfidence": {
     "High": 0,
-    "Medium": 287,
-    "Low": 2535
+    "Medium": 286,
+    "Low": 2536
   },
   "phoenixArea": {
     "definition": "One inclusive Phoenix/Valley market covering 33 named communities plus blank-city records from Phoenix-specific trade and pool sources; blank locations still need verification.",
@@ -25,6 +25,16 @@
       "Research First": 1510
     },
     "firstCallList": 30
+  },
+  "arizonaNoWebsite": {
+    "definition": "Arizona businesses with at least one review, a callable phone, no website URL in the consolidated record, and an explicit no-site signal. Source-only gaps are not treated as proof.",
+    "businesses": 300,
+    "firstPriorityList": 100,
+    "byTier": {
+      "Website lead - recheck today": 25,
+      "Verify website first": 275
+    },
+    "caution": "Every record requires a same-day business-name and phone search before a website claim. The verify tier only means the source omitted a website."
   },
   "sourceRows": {
     "arizonaV2": 941,
