@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T03:44:36.837Z",
+  "generatedAt": "2026-07-21T08:42:04.167Z",
   "rawRows": 3672,
   "excludedRows": 160,
   "deduplicatedBusinesses": 2835,
@@ -29,6 +29,8 @@
   "arizonaNoWebsite": {
     "definition": "Arizona businesses with at least one review, a callable phone, no website URL in the consolidated record, and an explicit no-site signal. Source-only gaps are not treated as proof.",
     "businesses": 300,
+    "firstQueue": 30,
+    "nextQueue": 70,
     "firstPriorityList": 100,
     "byTier": {
       "Website lead - recheck today": 25,
