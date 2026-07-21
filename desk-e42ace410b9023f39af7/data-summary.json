@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-07-21T03:07:39.873Z",
+  "rawRows": 3672,
+  "excludedRows": 160,
+  "deduplicatedBusinesses": 2835,
+  "callableOrEmailableLeads": 2822,
+  "byOffer": {
+    "Website": 62,
+    "Reviews": 999,
+    "AI Fit Call": 32,
+    "Research First": 1729
+  },
+  "byConfidence": {
+    "High": 0,
+    "Medium": 287,
+    "Low": 2535
+  },
+  "phoenixArea": {
+    "definition": "One inclusive Phoenix/Valley market covering 33 named communities plus blank-city records from Phoenix-specific trade and pool sources; blank locations still need verification.",
+    "businesses": 2423,
+    "byOffer": {
+      "Website": 43,
+      "Reviews": 863,
+      "AI Fit Call": 7,
+      "Research First": 1510
+    },
+    "firstCallList": 30
+  },
+  "sourceRows": {
+    "arizonaV2": 941,
+    "broadTrades": 1578,
+    "poolAndGarage": 535,
+    "treeContacts": 618
+  },
+  "cautions": [
+    "Website and Google profile observations must be rechecked immediately before outreach.",
+    "AI firmographics are third-party estimates and workflows are not verified until a fit call.",
+    "Scores measure sales opportunity, not business quality, revenue, or purchase intent.",
+    "Real estate, property management, photography, chains, closed records, and reputation holds are excluded."
+  ]
+}
