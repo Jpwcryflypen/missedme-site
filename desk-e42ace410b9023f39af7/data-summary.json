@@ -1,48 +1,80 @@
 {
-  "generatedAt": "2026-07-21T08:42:04.167Z",
+  "generatedAt": "2026-07-22T03:18:55.968Z",
   "rawRows": 3672,
   "excludedRows": 160,
-  "deduplicatedBusinesses": 2835,
-  "callableOrEmailableLeads": 2822,
+  "deduplicatedBusinesses": 3155,
+  "callableOrEmailableLeads": 3142,
   "byOffer": {
     "Website": 59,
-    "Reviews": 1001,
+    "Reviews": 1006,
     "AI Fit Call": 32,
-    "Research First": 1730
+    "Research First": 2045
   },
   "byConfidence": {
     "High": 0,
     "Medium": 286,
-    "Low": 2536
+    "Low": 2856
   },
   "phoenixArea": {
     "definition": "One inclusive Phoenix/Valley market covering 33 named communities plus blank-city records from Phoenix-specific trade and pool sources; blank locations still need verification.",
-    "businesses": 2423,
+    "businesses": 2530,
     "byOffer": {
       "Website": 43,
       "Reviews": 863,
       "AI Fit Call": 7,
-      "Research First": 1510
+      "Research First": 1617
     },
     "firstCallList": 30
   },
   "arizonaNoWebsite": {
     "definition": "Arizona businesses with at least one review, a callable phone, no website URL in the consolidated record, and an explicit no-site signal. Source-only gaps are not treated as proof.",
-    "businesses": 300,
+    "businesses": 299,
     "firstQueue": 30,
     "nextQueue": 70,
     "firstPriorityList": 100,
     "byTier": {
       "Website lead - recheck today": 25,
-      "Verify website first": 275
+      "Verify website first": 274
     },
     "caution": "Every record requires a same-day business-name and phone search before a website claim. The verify tier only means the source omitted a website."
+  },
+  "arizonaPaidLeadBuyers": {
+    "definition": "Arizona home-service businesses with a public paid-advertiser or likely-active lead-platform signal. Ordinary directory listings are excluded from this queue.",
+    "businesses": 389,
+    "existingCockpitMatches": 69,
+    "callableExistingMatches": 69,
+    "newlyVerifiedCallableContacts": 16,
+    "callableFirstQueue": 85,
+    "platformResearchOnly": 304,
+    "withGoogleProfileEvidence": 67,
+    "withDirectGoogleProfileLink": 66,
+    "withGoogleProfileSignalOnly": 1,
+    "withGoogleRatingOnly": 27,
+    "withWebsite": 106,
+    "byChannel": {
+      "Angi": 358,
+      "Google Local Services": 3,
+      "Google Search Ads": 2,
+      "HomeAdvisor / Angi Leads": 9,
+      "Thumbtack": 8,
+      "Yelp": 17
+    },
+    "mergeStats": {
+      "matchedExisting": 73,
+      "matchedPlatformRecord": 5,
+      "newResearchRecords": 320,
+      "ambiguous": 1
+    },
+    "caution": "A paid badge or Sponsored result confirms platform participation, not the advertiser's budget, profitability, or exact current spend. Website and Google fields are shown only when independently matched or explicitly verified."
   },
   "sourceRows": {
     "arizonaV2": 941,
     "broadTrades": 1578,
     "poolAndGarage": 535,
-    "treeContacts": 618
+    "treeContacts": 618,
+    "angiPaidResearch": 360,
+    "yelpSponsoredResearch": 17,
+    "otherPaidResearch": 21
   },
   "cautions": [
     "Website and Google profile observations must be rechecked immediately before outreach.",
