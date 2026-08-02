@@ -1,36 +1,35 @@
 (() => {
   const serviceSelect = document.getElementById('serviceSelect');
-  const recurringWorkField = document.getElementById('recurringWorkField');
-  const recurringWorkSelect = document.getElementById('weeklyRecurringWork');
-  const packageLinks = document.querySelectorAll('.package-link[data-package]');
+  const assessmentFocusField = document.getElementById('assessmentFocusField');
+  const assessmentFocusSelect = document.getElementById('assessmentFocus');
+  const serviceLinks = document.querySelectorAll('.package-link[data-package]');
 
   const syncAssessmentFields = () => {
-    if (!serviceSelect || !recurringWorkField || !recurringWorkSelect) return;
+    if (!serviceSelect || !assessmentFocusField || !assessmentFocusSelect) return;
     const selectedService = serviceSelect.value;
-    const isAssessment = !selectedService
-      || selectedService.startsWith('$')
+    const needsAssessmentFocus = selectedService === 'Free 15-minute assessment'
       || selectedService === 'Not sure yet';
 
-    recurringWorkField.hidden = !isAssessment;
-    recurringWorkSelect.required = isAssessment;
-    recurringWorkField.closest('.form-row')?.classList.toggle('single-field', !isAssessment);
+    assessmentFocusField.hidden = !needsAssessmentFocus;
+    assessmentFocusSelect.required = needsAssessmentFocus;
+    assessmentFocusField.closest('.form-row')?.classList.toggle('single-field', !needsAssessmentFocus);
 
-    if (isAssessment && recurringWorkSelect.value === 'Not applicable to my request') {
-      recurringWorkSelect.value = '';
-    } else if (!isAssessment) {
-      recurringWorkSelect.value = 'Not applicable to my request';
+    if (needsAssessmentFocus && assessmentFocusSelect.value === 'Not applicable to my request') {
+      assessmentFocusSelect.value = '';
+    } else if (!needsAssessmentFocus) {
+      assessmentFocusSelect.value = 'Not applicable to my request';
     }
   };
 
-  packageLinks.forEach((link) => {
+  serviceLinks.forEach((link) => {
     link.addEventListener('click', () => {
       if (!serviceSelect) return;
-      const requestedPackage = link.dataset.package;
+      const requestedService = link.dataset.package;
       const matchingOption = Array.from(serviceSelect.options).find(
-        (option) => option.value === requestedPackage,
+        (option) => option.value === requestedService,
       );
       if (matchingOption) {
-        serviceSelect.value = requestedPackage;
+        serviceSelect.value = requestedService;
         syncAssessmentFields();
       }
     });

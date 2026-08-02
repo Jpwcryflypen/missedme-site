@@ -525,7 +525,9 @@ details p { padding: 0 0 18px; color: var(--muted); }
 .proof-grid strong { align-items: center; background: #f4eee6; border-radius: 50%; color: var(--orange-dark); display: flex; flex: 0 0 30px; font-size: 0.78rem; height: 30px; justify-content: center; }
 .proof-grid span { font-size: 0.88rem; font-weight: 650; line-height: 1.35; }
 
-.assessment-grid { align-items: stretch; display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+.assessment-grid { align-items: stretch; display: grid; grid-template-columns: minmax(0, 760px); justify-content: center; margin-top: 48px; }
+.assessment-card { width: 100%; }
+.assessment-card h3, .assessment-card > p { min-height: 0; }
 .price-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: column; padding: 30px; position: relative; }
 .price-card-featured { border: 2px solid var(--orange); box-shadow: var(--shadow); }
 .popular-badge { background: var(--orange); border-radius: 999px; color: #fff; font-size: 0.7rem; font-weight: 800; left: 24px; letter-spacing: 0.05em; padding: 7px 11px; position: absolute; text-transform: uppercase; top: -15px; }
@@ -547,8 +549,8 @@ details p { padding: 0 0 18px; color: var(--muted); }
 .guarantee-box small { color: #4f6659; display: block; line-height: 1.55; }
 .guarantee-box a { color: #1e5a3c; font-weight: 700; }
 
-.support-grid { display: grid; gap: 24px; grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
-.support-card { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: var(--radius); padding: 30px; }
+.support-grid { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+.support-card { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: var(--radius); padding: 26px; }
 .support-number { color: var(--orange); display: block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; margin-bottom: 18px; }
 .support-card h3 { color: #fff; font-size: 1.35rem; }
 .support-card p, .support-card li { color: #c0ccda; }
@@ -557,7 +559,7 @@ details p { padding: 0 0 18px; color: var(--muted); }
 .text-link { color: #ffd9bd; font-weight: 750; text-decoration: none; }
 .text-link:hover { color: #fff; }
 
-.process-grid { display: grid; gap: 0; grid-template-columns: repeat(5, 1fr); margin-top: 42px; }
+.process-grid { display: grid; gap: 0; grid-template-columns: repeat(4, 1fr); margin-top: 42px; }
 .process-grid article { border-left: 1px solid var(--line); padding: 0 20px 20px; }
 .process-grid article:first-child { border-left: 0; padding-left: 0; }
 .process-grid article > span { color: var(--orange-dark); display: block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 20px; }
