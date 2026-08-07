@@ -11,6 +11,9 @@
     chat: 'voice-chat',
     'voice-chat': 'voice-chat',
     'ai-conversations': 'voice-chat',
+    'reviews-ai-conversations': 'reviews-ai-conversations',
+    'reviews-voice-chat': 'reviews-ai-conversations',
+    'reviews-voice': 'reviews-ai-conversations',
     site: 'website',
     website: 'website',
     audit: 'assessment',
@@ -90,6 +93,49 @@
       promiseLabel: 'How we set up the assistant',
       promiseTitle: 'It only does what you approve.',
       promiseText: 'The assistant follows the services, scheduling rules, and handoff limits you give us. We test those rules with you before it goes live.'
+    },
+    'reviews-ai-conversations': {
+      label: 'Reviews and backup AI setup',
+      headline: 'Let\'s get both services set up.',
+      lead: 'Tell us where your customer information lives and how calls and website messages should be handled when your team cannot answer.',
+      overviewTitle: 'What we need from you',
+      overviewText: 'You only need to explain how the business works now. We will turn that into the review follow-up and the first version of the backup assistant.',
+      needs: [
+        'Where completed customer names, phone numbers, or emails are stored',
+        'Your Google Business Profile link and documented contact permission',
+        'When the assistant should answer and what it may handle',
+        'Who should approve both setups before they go live'
+      ],
+      summaryTitle: 'We will prepare both setups for you to test and approve.',
+      summaryText: 'Review messages and the assistant stay off until you have seen how they work and approved them.',
+      formTitle: 'Tell us how reviews, calls, and website messages should work',
+      fields: [
+        { name: 'customer_source', label: 'Where does your customer information live?', placeholder: 'QuickBooks, Jobber, Housecall Pro, a spreadsheet, paper invoices, or somewhere else', required: true },
+        { name: 'google_profile', label: 'Google Business Profile link', placeholder: 'Paste the Google listing link if you have it handy', type: 'url' },
+        { name: 'customer_count', label: 'About how many past customers do you have?', placeholder: 'A rough estimate is fine' },
+        { name: 'contact_permission', label: 'What permission do you have to contact these customers?', placeholder: 'Tell us whether you have documented email permission, text permission, both, or are not sure', required: true, kind: 'textarea' },
+        { name: 'approval_contact', label: 'Who should approve the review request and assistant flow?', placeholder: 'Name, phone, or email' },
+        { name: 'business_phone', label: 'Business phone number customers call', placeholder: '(602) 555-0134', type: 'tel', required: true },
+        { name: 'answering_rules', label: 'When should the assistant answer?', placeholder: 'For example: after four rings, after hours, or only when nobody on the team answers', required: true, kind: 'textarea' },
+        { name: 'services_hours_area', label: 'What services, hours, and service area should it know?', placeholder: 'Give us the basics a customer usually asks about', required: true, kind: 'textarea' },
+        { name: 'assistant_tasks', label: 'What should it be allowed to do?', placeholder: 'Collect job details, answer questions, route emergencies, book an estimate, or something else', required: true, kind: 'textarea' },
+        { name: 'handoff_rules', label: 'When should it hand the conversation to a person?', placeholder: 'List anything it should never answer or decide on its own', kind: 'textarea' },
+        { name: 'text_follow_up', label: 'Should it send any text follow-up after a call?', placeholder: 'Tell us what you want sent. Automated text stays off until the business campaign is approved.', kind: 'textarea' },
+        { name: 'calendar_website', label: 'Website or scheduling calendar', placeholder: 'Paste a link if one already exists', type: 'url' }
+      ],
+      attachmentTitle: 'Have a customer list, FAQs, or service documents?',
+      attachmentText: 'After the email opens, attach anything we should use for the review setup or assistant. Do not send passwords or private account access in the email.',
+      subject: 'MissedMe reviews and AI conversations setup',
+      nextSteps: [
+        'We review the customer list, confirm contact permission, and verify the Google review link.',
+        'We prepare the review message and build the first phone and website chat flow.',
+        'You test both setups and approve the messages, answers, scheduling rules, and handoff limits.',
+        'Review email can start when the list, permission, and message are ready. Inbound voice can start after testing and approval.',
+        'Automated text stays off until the business campaign is carrier approved. Approval usually takes 10 to 15 days and can take longer.'
+      ],
+      promiseLabel: 'How we handle both services',
+      promiseTitle: 'Nothing goes live before you approve it.',
+      promiseText: 'We use your customer information only for your review service. The assistant follows the services, scheduling rules, and handoff limits you approve. The plan includes 250 backup voice minutes each month.'
     },
     website: {
       label: 'Website setup',
