@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Welcome to MissedMe — Let's get you set up</title>
-  <meta name="description" content="Private onboarding page for new MissedMe clients.">
+  <title>Client setup | MissedMe</title>
+  <meta name="description" content="Private setup page for new MissedMe clients.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260720-4">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -20,229 +20,111 @@
     </div>
   </header>
 
-  <!-- WELCOME -->
-  <section class="hero onboard-hero">
-    <div class="container container-narrow">
-      <p class="eyebrow">Your private setup page</p>
-      <h1 id="welcomeHeadline">Welcome aboard. Let's get your reviews moving.</h1>
-      <p class="lead">There's exactly <strong>one thing</strong> we need from you today: your customer list. That's it. Pick whichever path below fits you — every one of them works, and none of them takes more than a few minutes.</p>
-      <div class="onboard-steps" aria-label="Setup steps">
-        <div class="ob-step ob-now"><span>1</span> Customer list <em>— today</em></div>
-        <div class="ob-step"><span>2</span> Approve the message we'll send</div>
-        <div class="ob-step"><span>3</span> Reviews start landing</div>
+  <main>
+    <section class="hero onboard-hero">
+      <div class="container container-narrow">
+        <p class="eyebrow" id="serviceLabel">Google review setup</p>
+        <h1 id="welcomeHeadline">Let's get your review system set up.</h1>
+        <p class="lead" id="welcomeLead">Tell us where your customer information lives and how you want review requests handled. We will take it from there.</p>
+        <div class="onboard-steps" aria-label="Setup steps">
+          <div class="ob-step ob-now"><span>1</span> Send the setup details</div>
+          <div class="ob-step"><span>2</span> We review everything</div>
+          <div class="ob-step"><span>3</span> You approve the setup</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="container container-narrow">
-    <div class="success-banner" id="successBanner" hidden>
-      <strong>Got it — you're done for today. 🎉</strong>
-      <p>Your list is in. We'll clean it up, draft your review message, and send it to you for approval within one business day. Keep an eye on your phone and email.</p>
-    </div>
-  </div>
-
-  <!-- WHAT COUNTS -->
-  <section class="section onboard-what">
-    <div class="container container-narrow">
-      <h2>First — don't overthink the "list."</h2>
-      <p class="section-sub">A customer list is just <strong>names plus a phone number or email</strong>. It does not need to be clean, complete, or pretty. A messy spreadsheet, a pile of invoices, a phone full of texts — we've worked with all of it. Cleaning it up is our job, not yours.</p>
-    </div>
-  </section>
-
-  <!-- PATH PICKER -->
-  <section class="section section-dark onboard-paths">
-    <div class="container">
-      <h2>Where are your customers right now?</h2>
-      <p class="section-sub">Pick the one that sounds most like you.</p>
-      <div class="path-grid" role="tablist">
-        <button class="path-card" type="button" data-panel="panel-file" role="tab">
-          <span class="path-emoji">📄</span>
-          <h3>I've got a file</h3>
-          <p>Spreadsheet, CSV, export — somewhere on my computer.</p>
-        </button>
-        <button class="path-card" type="button" data-panel="panel-software" role="tab">
-          <span class="path-emoji">🖥️</span>
-          <h3>It's in my software</h3>
-          <p>QuickBooks, Jobber, Housecall Pro, my phone…</p>
-        </button>
-        <button class="path-card" type="button" data-panel="panel-nolist" role="tab">
-          <span class="path-emoji">🧾</span>
-          <h3>I don't really have one</h3>
-          <p>Paper invoices, texts, it's all in my head.</p>
-        </button>
-        <button class="path-card" type="button" data-panel="panel-notsure" role="tab">
-          <span class="path-emoji">🤙</span>
-          <h3>Not sure — help me</h3>
-          <p>Walk me through it. It'll take 15 minutes, tops.</p>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- PANELS + FORM -->
-  <section class="section onboard-form" id="send">
-    <div class="container container-narrow">
-
-      <div class="panel" id="panel-file" hidden>
-        <h2>Easy. Send it over.</h2>
-        <p class="section-sub">Excel, CSV, Numbers, PDF, even a photo of a printout — anything works. Attach it below and hit send.</p>
-      </div>
-
-      <div class="panel" id="panel-software" hidden>
-        <h2>Two minutes to get it out.</h2>
-        <p class="section-sub">Pick your software and follow the steps. Then attach the file below.</p>
-        <label class="tool-label">My customers live in…
-          <select id="toolSelect">
-            <option value="" disabled selected>Pick one</option>
-            <option value="qbo">QuickBooks Online</option>
-            <option value="jobber">Jobber</option>
-            <option value="hcp">Housecall Pro</option>
-            <option value="st">ServiceTitan</option>
-            <option value="square">Square</option>
-            <option value="phone">My phone / Google Contacts</option>
-            <option value="other">Something else</option>
-          </select>
-        </label>
-        <div class="tool-steps" id="steps-qbo" hidden>
-          <ol>
-            <li>Log in and go to <strong>Reports</strong></li>
-            <li>Search for and open the <strong>Customer Contact List</strong> report</li>
-            <li>Click the <strong>Export</strong> icon and choose <strong>Export to Excel</strong></li>
-            <li>Attach that file below</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-jobber" hidden>
-          <ol>
-            <li>Log in and go to <strong>Reports</strong></li>
-            <li>Open the <strong>Client Contact Info</strong> report</li>
-            <li>Click <strong>Export CSV</strong></li>
-            <li>Attach that file below</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-hcp" hidden>
-          <ol>
-            <li>Log in and open your <strong>Customers</strong> list</li>
-            <li>Click the <strong>Export</strong> button (top right)</li>
-            <li>You'll get a CSV by email or download</li>
-            <li>Attach that file below</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-st" hidden>
-          <ol>
-            <li>Ask whoever runs your office to export a <strong>customer contact report</strong> (Reports → any customer list with name, phone, email)</li>
-            <li>Attach that file below — or just hit send with a note and we'll hop on a screen-share and do it together</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-square" hidden>
-          <ol>
-            <li>Log in to your Square Dashboard and go to <strong>Customers</strong></li>
-            <li>Click the <strong>⋯ / Actions</strong> menu and choose <strong>Export customers</strong></li>
-            <li>Attach the CSV below</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-phone" hidden>
-          <ol>
-            <li>On a computer, go to <strong>contacts.google.com</strong> (sign in with the Google account on your phone)</li>
-            <li>Click <strong>Export</strong> in the left menu and choose <strong>Google CSV</strong></li>
-            <li>Attach that file below — don't worry that it includes non-customers, we'll sort it out together</li>
-          </ol>
-        </div>
-        <div class="tool-steps" id="steps-other" hidden>
-          <p>No problem. Almost every program has an export or print option for customers. Hit send with a note telling us what you use, and we'll get on a quick screen-share and pull it out together.</p>
-        </div>
-        <p class="tool-stuck">Stuck on any step? Send a screenshot of what you're looking at — that counts too.</p>
-      </div>
-
-      <div class="panel" id="panel-nolist" hidden>
-        <h2>No list? You're more normal than you think.</h2>
-        <p class="section-sub">Half the companies we work with start exactly here. Any of these gets us going:</p>
-        <ul class="check-list">
-          <li><strong>Snap photos</strong> of paper invoices, receipts, or your job notebook and attach them below</li>
-          <li><strong>Type or paste</strong> names and numbers straight from your texts into the box below — even 10 is a great start</li>
-          <li><strong>Or do neither</strong> — hit send with a note and we'll build the list together on a 15-minute call</li>
+    <section class="section onboard-what">
+      <div class="container container-narrow">
+        <h2 id="overviewTitle">What we need from you</h2>
+        <p class="section-sub" id="overviewText">You do not need to organize everything before you start. Tell us what you have and where it lives. We will let you know if anything else is needed.</p>
+        <ul class="setup-needs" id="setupNeeds">
+          <li>Where your customer names, phone numbers, or emails are stored</li>
+          <li>Your Google Business Profile link</li>
+          <li>Who should approve the message before it goes out</li>
         </ul>
-        <p class="section-sub">And going forward, we'll set you up with a dead-simple way to capture every new customer, so you never have to do this again.</p>
       </div>
+    </section>
 
-      <div class="panel" id="panel-notsure" hidden>
-        <h2>Let's just do it together.</h2>
-        <p class="section-sub">Fastest option there is: a 15-minute call where you tell us where your customer info lives — software, phone, shoebox, anywhere — and we pull it out with you. Fill in your name and number below, add a note with a good time to call, and hit send. Or email <a href="mailto:john@missedme.ai">john@missedme.ai</a> any time.</p>
+    <section class="section section-dark service-summary">
+      <div class="container container-narrow">
+        <p class="eyebrow eyebrow-light">What happens next</p>
+        <h2 id="summaryTitle">We will prepare the review request for your approval.</h2>
+        <p class="section-sub" id="summaryText">Nothing goes out until you have seen the message and approved it.</p>
       </div>
+    </section>
 
-      <form class="signup-form" action="https://formsubmit.co/john@missedme.ai" method="POST" enctype="multipart/form-data" id="onboardForm">
-        <input type="hidden" name="_subject" value="Customer list — MissedMe onboarding">
-        <input type="hidden" name="_next" value="https://missedme.ai/start?done=1" id="nextUrl">
-        <input type="hidden" name="path" value="" id="pathField">
-        <div class="form-row">
-          <label>Your name
-            <input type="text" name="name" required autocomplete="name" placeholder="Mike Torres">
+    <section class="section onboard-form" id="send">
+      <div class="container container-narrow">
+        <h2 id="formTitle">Tell us how your customer information is set up</h2>
+        <p class="section-sub" id="formIntro">This form prepares an email to John. It does not upload anything to a third party.</p>
+
+        <form class="signup-form" id="onboardForm">
+          <input type="hidden" name="service" id="serviceField" value="reviews">
+
+          <div class="form-row">
+            <label>Your name
+              <input type="text" name="name" required autocomplete="name" placeholder="Mike Torres" id="nameField">
+            </label>
+            <label>Business name
+              <input type="text" name="business" required autocomplete="organization" placeholder="Torres Tree Care" id="bizField">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>Best phone for you
+              <input type="tel" name="phone" required autocomplete="tel" placeholder="(602) 555-0134">
+            </label>
+            <label>Best email for you
+              <input type="email" name="email" required autocomplete="email" placeholder="mike@example.com">
+            </label>
+          </div>
+
+          <div id="serviceFields"></div>
+
+          <label>Anything else we should know? <span class="label-opt">(optional)</span>
+            <textarea name="notes" rows="4" placeholder="Add anything that would help us understand your setup."></textarea>
           </label>
-          <label>Business name
-            <input type="text" name="business" required autocomplete="organization" placeholder="Torres Tree Care" id="bizField">
-          </label>
+
+          <div class="email-handoff" id="attachmentNotice">
+            <strong>Have a customer list or another file to send?</strong>
+            <p>After you click the button, your email app will open with these details filled in. Attach the file there before you send it. This page does not upload or store your files.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submitButton">Open the setup email</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-fine">If your email app does not open, email <a href="mailto:john@missedme.ai" id="emailFallback">john@missedme.ai</a> and include the details above.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-offer">
+      <div class="container container-narrow">
+        <div class="offer-box">
+          <p class="eyebrow eyebrow-light" id="promiseLabel">How we handle your customer information</p>
+          <h2 id="promiseTitle">Your customer information stays private.</h2>
+          <p class="offer-text" id="promiseText">We use it only to set up and run the service you asked for. We do not sell it or use it for another company.</p>
         </div>
-        <label>Best phone for you
-          <input type="tel" name="phone" required autocomplete="tel" placeholder="(602) 555-0134">
-        </label>
-        <label>Attach your list — or photos of invoices <span class="label-opt">(optional)</span>
-          <input type="file" name="attachment" accept=".csv,.xls,.xlsx,.numbers,.pdf,.txt,.png,.jpg,.jpeg,.heic" multiple>
-        </label>
-        <label>Or paste customers right here <span class="label-opt">(optional — name + phone or email, any format)</span>
-          <textarea name="pasted_list" rows="5" placeholder="Maria Gonzalez 602-555-0188&#10;Dave R — dave@email.com&#10;Sandra, the big mesquite job on Oak St, 480-555-0123"></textarea>
-        </label>
-        <details class="setup-extra">
-          <summary>Got 5 more minutes? Knock out your whole account setup now</summary>
-          <p class="setup-extra-note">All optional — we'll collect anything missing by text. But sending it now means zero back-and-forth later.</p>
-          <label>Your logo <span class="label-opt">(any image file)</span>
-            <input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.webp,.heic,.pdf">
-          </label>
-          <label>Exact legal business name <span class="label-opt">(as it appears on your IRS paperwork — including LLC/Inc)</span>
-            <input type="text" name="legal_name" placeholder="Torres Tree Care LLC">
-          </label>
-          <p class="setup-extra-note"><strong>Do not upload tax IDs, EIN letters, banking details, government identification, passwords, or other highly sensitive records here.</strong> If a provider later requires verification, MissedMe will arrange an appropriate secure collection method.</p>
-          <label>Business website <span class="label-opt">(if you have one)</span>
-            <input type="text" name="website" inputmode="url" placeholder="torrestree.com">
-          </label>
-        </details>
-        <label>Anything we should know? <span class="label-opt">(optional)</span>
-          <textarea name="notes" rows="3" placeholder="Best time to call, where your customer info lives, questions…"></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary btn-full">Send it — I'm done for today</button>
-        <p class="form-fine">File won't attach or it contains sensitive information? Do not email it. Contact <a href="mailto:john@missedme.ai">john@missedme.ai</a> so we can choose an appropriate transfer method.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- PROMISE -->
-  <section class="section section-offer">
-    <div class="container container-narrow">
-      <div class="offer-box">
-        <p class="eyebrow eyebrow-light">Our promise about your list</p>
-        <h2>Your customers stay your customers.</h2>
-        <p class="offer-text">Each customer gets <strong>one friendly, personal message</strong> on your behalf—not spam. Anyone who opts out is not contacted again through the campaign. Your list is <strong>never sold or shared for unrelated marketing</strong>. We use service providers only as needed to deliver the campaign and handle retention or deletion as described in our <a href="privacy.html" style="color:#fff">Privacy Policy</a>.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT HAPPENS NEXT -->
-  <section class="section">
-    <div class="container container-narrow">
-      <h2>What happens after you hit send</h2>
-      <ul class="check-list">
-        <li><strong>Within 1 business day</strong> — we clean up your list and draft the review message your customers will get</li>
-        <li><strong>You approve it</strong> — one text or email from you, nothing goes out without your OK</li>
-        <li><strong>One more link</strong> — we'll text you a two-click link to connect your Google Business Profile so the approved campaign can point genuine customers to the correct profile</li>
-        <li><strong>Requests go out</strong> — personal, friendly, and branded for your business. Google and your customers decide whether and when a review appears</li>
-        <li><strong>Then we talk next steps</strong> — if useful, we can separately scope your website or an ongoing review-request workflow for new jobs</li>
-      </ul>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container container-narrow">
+        <h2 id="nextTitle">What happens after you send the email</h2>
+        <ul class="check-list" id="nextSteps">
+          <li>We review your setup details and any files you attach.</li>
+          <li>We prepare the message and account setup.</li>
+          <li>You review and approve everything before it goes live.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div>
         <span class="logo logo-footer">missedme<span>.ai</span></span>
-        <p>Google reviews &amp; Business Profile management for service companies.</p>
+        <p>Practical systems that help local businesses follow up, get found, and stop losing good opportunities.</p>
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
@@ -251,7 +133,7 @@
       </div>
     </div>
     <div class="container footer-legal">
-      <p>© 2026 MissedMe LLC · Phoenix, AZ. MissedMe is not affiliated with Google. Google and Google Business Profile are trademarks of Google LLC.</p>
+      <p>&copy; 2026 MissedMe LLC. Phoenix, Arizona.</p>
     </div>
   </footer>
 

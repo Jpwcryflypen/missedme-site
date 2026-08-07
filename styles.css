@@ -1,4 +1,4 @@
-/* MissedMe — GBP & Reviews site */
+/* MissedMe GBP and Reviews site */
 :root {
   --navy: #0b2545;
   --navy-deep: #081a33;
@@ -146,7 +146,7 @@ h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
 }
 .step p { color: var(--muted); font-size: 0.97rem; }
 
-/* Scrollytelling — profile demo */
+/* Scrollytelling profile demo */
 .scrolly-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -294,7 +294,7 @@ summary::after {
   font-size: 1.4rem;
   font-weight: 600;
 }
-details[open] summary::after { content: "–"; }
+details[open] summary::after { content: "-"; }
 details p { padding: 0 0 18px; color: var(--muted); }
 
 /* Signup */
@@ -446,6 +446,65 @@ details p { padding: 0 0 18px; color: var(--muted); }
   color: #1e5a3c;
 }
 .success-banner p { margin-top: 6px; font-size: 0.97rem; }
+
+.service-summary { padding: 56px 0; }
+.service-summary h2 { margin-bottom: 0.85rem; }
+.service-summary .section-sub { margin-bottom: 0; }
+
+.setup-needs {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+.setup-needs li {
+  position: relative;
+  padding: 14px 16px 14px 46px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+}
+.setup-needs li::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 19px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 5px rgba(242, 118, 46, 0.14);
+}
+
+.email-handoff {
+  margin: 8px 0 20px;
+  padding: 18px 20px;
+  border: 1px solid #bfd7e8;
+  border-radius: 10px;
+  background: #f2f8fc;
+  color: var(--navy);
+}
+.email-handoff p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin-top: 14px;
+  color: #1e5a3c;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.form-fine a { color: var(--orange-dark); }
+
+@media (max-width: 620px) {
+  .onboard-steps { display: grid; }
+  .ob-step { width: 100%; }
+  .onboard-form .signup-form { padding: 22px 18px; }
+}
 
 /* Mobile */
 @media (max-width: 820px) {
