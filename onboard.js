@@ -56,69 +56,84 @@
     {
       name: 'legalBusinessName',
       label: 'Legal business name',
-      placeholder: 'The exact name registered for the business',
+      placeholder: 'Example Plumbing LLC',
       required: true,
       autocomplete: 'organization',
-      maxlength: 200
+      maxlength: 200,
+      description: 'Use the name on your IRS EIN letter or W-9. It may be different from the name customers know.'
     },
     {
       name: 'ein',
-      label: 'Employer Identification Number (EIN)',
+      label: 'Federal tax ID (EIN)',
       placeholder: '12-3456789',
       required: true,
       inputmode: 'numeric',
       autocomplete: 'off',
       maxlength: 10,
-      description: 'We use this only for the required business verification. It is not placed in a link, email, or browser storage.'
+      description: 'This is the 9-digit number on your IRS EIN letter, W-9, or business tax return. Do not enter a Social Security number.'
     }
   ]);
 
   const REVIEW_FIELDS = Object.freeze([
     {
       name: 'googleReviewUrl',
-      label: 'Direct Google review link',
-      placeholder: 'Paste the link that opens the Google review form',
+      label: 'Google Business Profile link',
+      placeholder: 'Paste the Google or Google Maps link for your business',
       required: true,
       type: 'url',
       maxlength: 2048,
-      description: 'Open the link in another tab first and make sure it goes to the correct business.'
+      description: 'Send us the normal Google or Google Maps link. We will create and test the direct review link for you.'
     },
     {
       name: 'approvedMessage',
-      label: 'Exact review request you approve',
-      placeholder: 'Type the exact message customers should receive.',
+      label: 'Message you are approving',
+      placeholder: 'Choose one of the messages above, or write your own.',
       required: true,
       kind: 'textarea',
       maxlength: 1200,
-      description: 'Nothing is rewritten after you approve it. If the wording changes, you will approve the new version first.'
+      description: 'We fill in the customer name, business name, and review link. We send you a test before anything goes to customers.'
     },
     {
       name: 'approverName',
-      label: 'Name of the person approving this message',
+      label: 'Who is approving this message?',
       placeholder: 'Full name',
       required: true,
       autocomplete: 'name',
-      maxlength: 120
+      maxlength: 120,
+      description: 'Usually this is the owner or manager completing this setup.'
+    }
+  ]);
+
+  const REVIEW_MESSAGE_TEMPLATES = Object.freeze([
+    {
+      id: 'friendly',
+      label: 'Friendly',
+      copy: businessName => `Hi [First name], this is ${businessName}. Thanks for choosing us. Would you take a minute to leave us an honest Google review? [Review link] Reply STOP to opt out.`
+    },
+    {
+      id: 'short',
+      label: 'Short',
+      copy: businessName => `Hi [First name], this is ${businessName}. Would you mind leaving us an honest Google review about your experience? [Review link] Reply STOP to opt out.`
     }
   ]);
 
   const SERVICES = Object.freeze({
     reviews: {
       label: 'Google review setup',
-      headline: 'Let\'s get your review system set up.',
-      lead: 'Add the business details, the exact message you approve, and the customers who are eligible to receive it.',
+      headline: 'Let\'s get your review system ready.',
+      lead: 'The easiest way to finish is a 15-minute setup call with John. If you would rather do it yourself, the form is below.',
       overviewTitle: 'What we need from you',
-      overviewText: 'You do not need to clean up a large spreadsheet first. A CSV with a name and either a phone number or email for each customer is enough.',
+      overviewText: 'Fill in what you know. If you are missing something, choose the help option in that section.',
       needs: [
-        'The legal business name and EIN used for business texting registration',
-        'The direct Google review link for the correct business',
-        'The exact review request wording and the person approving it',
-        'A CSV of real customers the business is allowed to contact'
+        'The business name and federal tax ID used for texting approval',
+        'The normal Google listing for the business',
+        'The message you want customers to receive',
+        'A customer list with names and phone numbers or email addresses'
       ],
       summaryTitle: 'We will verify the setup before any customer is contacted.',
       summaryText: 'Text requests stay off until the business, message, customer list, campaign, and assigned number pass the required checks.',
-      formTitle: 'Add the review setup details',
-      formIntro: 'The CSV is read on this page and sent as normalized contact fields. The original file is not uploaded.',
+      formTitle: 'Finish your review setup',
+      formIntro: 'Fill in what you know. If you are missing something, use the help option in that section. Nothing goes to customers until John checks it and sends you a test.',
       includesReviews: true,
       detailsTitle: '',
       detailsFields: [],
@@ -170,18 +185,18 @@
     'reviews-ai-conversations': {
       label: 'Reviews and backup AI setup',
       headline: 'Let\'s get both services set up.',
-      lead: 'Add the approved review setup and tell us how calls and website messages should work when your team cannot answer.',
+      lead: 'The easiest way to finish is a 15-minute setup call with John. If you would rather do it yourself, the form is below.',
       overviewTitle: 'What we need from you',
       overviewText: 'This one setup covers the review follow-up and the first version of the backup assistant.',
       needs: [
-        'The legal business details, direct Google review link, approved message, and eligible customer list',
+        'The business information, Google listing, message choice, and customer list',
         'When the assistant should answer and what it may handle',
         'When it should stop and hand the conversation to a person'
       ],
       summaryTitle: 'We will verify both setups before either one is activated.',
       summaryText: 'The review messages and assistant stay off until the required checks and your approval are complete.',
       formTitle: 'Add the review, call, and website message details',
-      formIntro: 'The customer CSV is converted into normalized contact fields here. The original file is not uploaded.',
+      formIntro: 'Fill in what you know. If you are missing something, use the help option in that section. Nothing goes live until John checks it with you.',
       includesReviews: true,
       detailsTitle: 'Calls and website messages',
       detailsFields: [
@@ -505,17 +520,17 @@
       network_error: 'We could not reach the secure setup service. Keep this page open and try again.',
       request_timeout: 'The secure connection took too long. Keep this page open and try again.',
       invalid_ein: 'Enter the nine digits of the business EIN.',
-      invalid_google_review_url: 'Check the direct Google review link and try again.',
-      csv_file_too_large: 'Choose a CSV smaller than 5 MB.',
-      csv_wrong_file_type: 'Choose a CSV file.',
-      csv_unclosed_quote: 'The CSV has an unfinished quoted field. Export it again and retry.',
-      csv_needs_header_and_rows: 'The CSV needs a header row and at least one customer.',
-      csv_too_many_rows: 'The CSV can contain up to 5,000 customer rows at a time.',
-      csv_missing_columns: 'The CSV needs a name column and at least one phone or email column.',
+      invalid_google_review_url: 'Paste the Google or Google Maps link for the correct business.',
+      csv_file_too_large: 'Choose a customer list smaller than 5 MB.',
+      csv_wrong_file_type: 'Choose a customer list saved as CSV. If you use Excel or Google Sheets, download it as CSV or book a setup call.',
+      csv_unclosed_quote: 'The customer list could not be read. Export it again or book a setup call.',
+      csv_needs_header_and_rows: 'The customer list needs column names and at least one customer.',
+      csv_too_many_rows: 'The customer list can contain up to 5,000 customers at a time.',
+      csv_missing_columns: 'The customer list needs a name column and at least one phone or email column.',
       csv_no_usable_contacts: 'We could not find a usable customer with a name and a valid phone number or email.',
       customer_row_too_large: 'One customer row is too large. Shorten that row and try again.',
       customer_batch_rejected: 'One customer batch could not be accepted. Check the list and try again.',
-      customer_list_required: 'Choose the eligible customer CSV before sending the setup.',
+      customer_list_required: 'Choose the customer list before sending the setup, or use the help option in that section.',
       secure_random_unavailable: 'This browser cannot prepare the customer list securely. Try a current version of Chrome, Safari, Edge, or Firefox.',
       validation_error: 'Check the highlighted setup detail and try again.',
       unsupported_offer: 'This setup link does not match a supported MissedMe service. Ask John for a new link.',
@@ -575,6 +590,7 @@
 
   const exported = {
     CUSTOMER_LIMITS,
+    REVIEW_MESSAGE_TEMPLATES,
     buildCustomerBatches,
     captureAndScrubInvitation,
     normalizeCustomerCsv,
@@ -621,7 +637,11 @@
     successTitle: document.getElementById('successTitle'),
     successMessage: document.getElementById('successMessage'),
     inviteBusiness: document.getElementById('inviteBusiness'),
-    inviteContact: document.getElementById('inviteContact')
+    inviteContact: document.getElementById('inviteContact'),
+    selectedHelpPanel: document.getElementById('selectedHelpPanel'),
+    selectedHelpText: document.getElementById('selectedHelpText'),
+    onboardWhatSection: document.getElementById('onboardWhatSection'),
+    serviceSummarySection: document.getElementById('serviceSummarySection')
   };
 
   function setText(id, text) {
@@ -686,10 +706,11 @@
   }
 
   function markCurrentStep(stepName) {
+    if (!elements.steps) return;
     elements.steps.querySelectorAll('[data-step]').forEach(step => {
       const active = step.dataset.step === stepName;
       step.classList.toggle('ob-now', active);
-      step.classList.toggle('ob-done', !active && stepName !== 'details' && step.dataset.step === 'details');
+      step.classList.toggle('ob-done', stepName === 'review' && !active);
     });
   }
 
@@ -754,18 +775,55 @@
     return label;
   }
 
+  function createHelpChoice(name, text, topic) {
+    const label = document.createElement('label');
+    label.className = 'setup-help-choice';
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.name = name;
+    input.id = `field-${name}`;
+    input.dataset.setupHelp = topic;
+    const copy = document.createElement('span');
+    copy.textContent = text;
+    label.append(input, copy);
+    return label;
+  }
+
+  function createMessageChoice(template, businessName) {
+    const label = document.createElement('label');
+    label.className = 'message-choice';
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'messageStyle';
+    input.value = template.id;
+    input.required = true;
+    const copy = document.createElement('span');
+    const title = document.createElement('strong');
+    title.textContent = template.label;
+    const preview = document.createElement('small');
+    preview.textContent = template.copy(businessName);
+    copy.append(title, preview);
+    label.append(input, copy);
+    return label;
+  }
+
   function createIdentitySection() {
     const fieldset = document.createElement('fieldset');
     fieldset.className = 'form-section identity-section';
     const legend = document.createElement('legend');
-    legend.textContent = 'Legal business details';
+    legend.textContent = 'Business information for texting approval';
     const intro = document.createElement('p');
     intro.className = 'form-section-intro';
-    intro.textContent = 'Enter these exactly as they appear on the official business records. We use them only for setup and required registration checks.';
+    intro.textContent = 'Phone carriers ask for this before they allow a business to send review texts.';
     const grid = document.createElement('div');
     grid.className = 'service-field-grid';
     grid.append(...IDENTITY_FIELDS.map(createField));
-    fieldset.append(legend, intro, grid);
+    const help = createHelpChoice(
+      'helpBusinessIdentity',
+      'I need help finding the legal business name or EIN.',
+      'business name or EIN'
+    );
+    fieldset.append(legend, intro, grid, help);
     return fieldset;
   }
 
@@ -773,24 +831,80 @@
     const fieldset = document.createElement('fieldset');
     fieldset.className = 'form-section review-setup-section';
     const legend = document.createElement('legend');
-    legend.textContent = 'Review request setup';
+    legend.textContent = 'Google listing and customer message';
     const intro = document.createElement('p');
     intro.className = 'form-section-intro';
-    intro.textContent = 'Approve the exact message and add only customers this business is allowed to contact.';
+    intro.textContent = 'Send us the normal Google listing, then choose the message you want your customers to receive.';
     const grid = document.createElement('div');
     grid.className = 'service-field-grid';
-    grid.append(...REVIEW_FIELDS.map(createField));
+    grid.append(createField(REVIEW_FIELDS[0]));
+
+    const googleHelp = document.createElement('details');
+    googleHelp.className = 'field-help-details field-full';
+    const googleSummary = document.createElement('summary');
+    googleSummary.textContent = 'How do I find my Google listing?';
+    const googleInstructions = document.createElement('p');
+    googleInstructions.textContent = 'Open Google or Google Maps, find your business, tap Share, then Copy link. Paste that link above.';
+    googleHelp.append(googleSummary, googleInstructions);
+
+    const googleHelpChoice = createHelpChoice(
+      'helpGoogleListing',
+      'I need help finding my Google listing.',
+      'Google listing'
+    );
+    googleHelpChoice.classList.add('field-full');
+
+    const messageBlock = document.createElement('div');
+    messageBlock.className = 'message-template-block field-full';
+    const messageHeading = document.createElement('h3');
+    messageHeading.textContent = 'Choose the message your customers will get';
+    const messageIntro = document.createElement('p');
+    messageIntro.textContent = 'You do not have to write this yourself. Pick one, or choose your own wording.';
+    const businessName = intake?.contact?.businessName || 'your business';
+    const choices = document.createElement('div');
+    choices.className = 'message-choice-grid';
+    choices.append(...REVIEW_MESSAGE_TEMPLATES.map(template => createMessageChoice(template, businessName)));
+    const customChoice = document.createElement('label');
+    customChoice.className = 'message-choice';
+    const customRadio = document.createElement('input');
+    customRadio.type = 'radio';
+    customRadio.name = 'messageStyle';
+    customRadio.value = 'custom';
+    customRadio.required = true;
+    const customCopy = document.createElement('span');
+    const customTitle = document.createElement('strong');
+    customTitle.textContent = 'Use different wording';
+    const customPreview = document.createElement('small');
+    customPreview.textContent = 'Write or edit the message below.';
+    customCopy.append(customTitle, customPreview);
+    customChoice.append(customRadio, customCopy);
+    choices.append(customChoice);
+    messageBlock.append(messageHeading, messageIntro, choices);
+
+    grid.append(
+      googleHelp,
+      googleHelpChoice,
+      messageBlock,
+      createField(REVIEW_FIELDS[1]),
+      createField(REVIEW_FIELDS[2])
+    );
 
     const messageApproval = createCheckbox(
       'messageApproved',
-      'I approve the exact review request written above. I understand that I will approve it again if the wording changes.'
+      'I approve the message selected above. I understand that John will send me a test before it goes to customers.'
+    );
+
+    const messageHelpChoice = createHelpChoice(
+      'helpReviewMessage',
+      'I want John to help me choose the message.',
+      'review message'
     );
 
     const listField = document.createElement('div');
     listField.className = 'customer-list-field';
     const listLabel = document.createElement('label');
     listLabel.htmlFor = 'customerCsv';
-    listLabel.textContent = 'Eligible customer CSV';
+    listLabel.textContent = 'Customer list';
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
     fileInput.id = 'customerCsv';
@@ -800,22 +914,47 @@
     const help = document.createElement('span');
     help.className = 'field-description';
     help.id = 'customerCsvHelp';
-    help.textContent = 'Use a CSV with First Name and Last Name, or Full Name, plus Phone, Email, or both. Up to 5,000 customers and 5 MB.';
+    help.textContent = 'Choose a CSV exported from Excel, Google Sheets, or your customer system. It needs each customer\'s name and a phone number, email address, or both.';
+    const templateLink = document.createElement('a');
+    templateLink.className = 'customer-template-link';
+    templateLink.href = 'customer-list-template.csv';
+    templateLink.download = 'missedme-customer-list-template.csv';
+    templateLink.textContent = 'Download a simple customer list example';
     const status = document.createElement('span');
     status.className = 'file-status';
     status.id = 'customerCsvStatus';
     status.setAttribute('role', 'status');
     status.setAttribute('aria-live', 'polite');
-    status.textContent = 'No customer list has been prepared yet.';
-    listLabel.append(fileInput, help, status);
+    status.textContent = 'No customer list added yet.';
+    listLabel.append(fileInput, help, templateLink, status);
     listField.append(listLabel);
+
+    const customerHelpChoice = createHelpChoice(
+      'helpCustomerList',
+      'I need help getting my customer list ready.',
+      'customer list'
+    );
 
     const consent = createCheckbox(
       'customerConsentAttested',
-      'I confirm each person is a real customer who gave this business permission to contact them through the phone number or email included for this review request. This list does not include purchased, scraped, unrelated, opted-out, or STOP contacts.'
+      'I confirm these are real customers who agreed to receive messages from my business. I removed anyone who opted out or asked us to stop.'
     );
 
-    fieldset.append(legend, intro, grid, messageApproval, listField, consent);
+    const listWarning = document.createElement('p');
+    listWarning.className = 'customer-list-warning';
+    listWarning.textContent = 'Do not use purchased, scraped, unrelated, opted-out, or STOP contacts.';
+
+    fieldset.append(
+      legend,
+      intro,
+      grid,
+      messageApproval,
+      messageHelpChoice,
+      listField,
+      customerHelpChoice,
+      consent,
+      listWarning
+    );
     return fieldset;
   }
 
@@ -844,6 +983,52 @@
     status.classList.toggle('is-ready', !isError && Boolean(customerState));
   }
 
+  function selectedHelpTopics() {
+    return Array.from(elements.form.querySelectorAll('[data-setup-help]:checked'))
+      .map(control => sanitizeCell(control.dataset.setupHelp, 80))
+      .filter(Boolean);
+  }
+
+  function updateSelectedHelpPanel() {
+    const topics = selectedHelpTopics();
+    elements.selectedHelpPanel.hidden = topics.length === 0;
+    if (!topics.length) return;
+    elements.selectedHelpText.textContent = `You asked for help with ${topics.join(', ')}. Book a 15-minute call or call John now. Have your EIN and access to your customer list nearby. You do not need to make a spreadsheet first.`;
+  }
+
+  function wireReviewMessageChoices() {
+    const approvedMessage = document.getElementById('field-approvedMessage');
+    if (!approvedMessage) return;
+    const businessName = intake?.contact?.businessName || 'your business';
+    const templateValues = Object.fromEntries(
+      REVIEW_MESSAGE_TEMPLATES.map(template => [template.id, template.copy(businessName)])
+    );
+    const choices = Array.from(elements.form.querySelectorAll('input[name="messageStyle"]'));
+    choices.forEach(choice => {
+      choice.addEventListener('change', () => {
+        if (!choice.checked) return;
+        if (choice.value === 'custom') {
+          if (approvedMessage.dataset.templateId) approvedMessage.value = '';
+          approvedMessage.dataset.templateId = '';
+          approvedMessage.focus();
+          return;
+        }
+        approvedMessage.value = templateValues[choice.value] || '';
+        approvedMessage.dataset.templateId = choice.value;
+      });
+    });
+    approvedMessage.addEventListener('input', () => {
+      const selected = elements.form.querySelector('input[name="messageStyle"]:checked');
+      if (!selected || selected.value === 'custom') return;
+      const expected = templateValues[selected.value] || '';
+      if (approvedMessage.value !== expected) {
+        const custom = elements.form.querySelector('input[name="messageStyle"][value="custom"]');
+        if (custom) custom.checked = true;
+        approvedMessage.dataset.templateId = '';
+      }
+    });
+  }
+
   async function prepareCustomerCsv(fileInput) {
     const file = fileInput.files && fileInput.files[0];
     customerState = null;
@@ -863,7 +1048,7 @@
       };
       const ignored = normalized.rejected + normalized.duplicates;
       const ignoredCopy = ignored ? ` ${ignored.toLocaleString()} duplicate or unusable row${ignored === 1 ? ' was' : 's were'} left out.` : '';
-      setFileStatus(`${normalized.customers.length.toLocaleString()} eligible customer${normalized.customers.length === 1 ? '' : 's'} ready.${ignoredCopy}`);
+      setFileStatus(`${normalized.customers.length.toLocaleString()} customer${normalized.customers.length === 1 ? '' : 's'} ready.${ignoredCopy}`);
     } catch (error) {
       setFileStatus(safeErrorMessage(error), true);
     } finally {
@@ -885,10 +1070,12 @@
     setText('promiseLabel', service.promiseLabel);
     setText('promiseTitle', service.promiseTitle);
     setText('promiseText', service.promiseText);
+    elements.onboardWhatSection.hidden = Boolean(service.includesReviews);
+    elements.serviceSummarySection.hidden = Boolean(service.includesReviews);
     setText(
       'privacyText',
       service.includesReviews
-        ? 'We do not put your EIN or customer list in a link, email, or browser storage. The customer file is read here, converted into the required contact fields, and then cleared from the file input.'
+        ? 'We do not put your EIN or customer list in a link, email, or browser storage. The original customer spreadsheet stays on your device. Only the contact details needed for setup go through this private session.'
         : serviceRequiresIdentity(intake.serviceKey)
           ? 'We do not put your EIN or setup details in a link, email, or browser storage. They are sent only through this private setup session.'
           : 'We do not put your setup details in a link, email, or browser storage. They are sent only through this private setup session.'
@@ -908,8 +1095,15 @@
 
     const einInput = document.getElementById('field-ein');
     if (einInput) einInput.addEventListener('input', () => formatEinInput(einInput));
+    const approverInput = document.getElementById('field-approverName');
+    if (approverInput && !approverInput.value) approverInput.value = intake.contact.name || '';
     const fileInput = document.getElementById('customerCsv');
     if (fileInput) fileInput.addEventListener('change', () => prepareCustomerCsv(fileInput));
+    elements.form.querySelectorAll('[data-setup-help]').forEach(control => {
+      control.addEventListener('change', updateSelectedHelpPanel);
+    });
+    wireReviewMessageChoices();
+    updateSelectedHelpPanel();
   }
 
   function isCompletedStatus(status) {
@@ -922,10 +1116,10 @@
     renderService();
     elements.accessSection.hidden = true;
     elements.content.hidden = false;
-    elements.steps.hidden = false;
+    if (elements.steps) elements.steps.hidden = true;
     if (isCompletedStatus(intake.status)) showSuccess(intake.status);
     else {
-      markCurrentStep('details');
+      markCurrentStep('business');
       const firstField = elements.serviceFields.querySelector('input:not([type="hidden"]), textarea');
       if (firstField) window.requestAnimationFrame(() => firstField.focus({ preventScroll: true }));
     }
@@ -1007,7 +1201,7 @@
 
     for (let index = 0; index < customerState.batches.length; index += 1) {
       const percent = 15 + ((index / customerState.batches.length) * 60);
-      setSubmissionProgress(percent, 'Sending the eligible customers', `Sending batch ${index + 1} of ${customerState.batches.length}.`);
+      setSubmissionProgress(percent, 'Sending the customer list', `Sending part ${index + 1} of ${customerState.batches.length}.`);
       const response = await apiRequest('/v1/onboarding/customer-batches', {
         method: 'POST',
         body: customerState.batches[index]
@@ -1053,6 +1247,15 @@
 
     elements.formStatus.textContent = '';
     elements.formStatus.classList.remove('is-error');
+    const helpTopics = selectedHelpTopics();
+    const missingCustomerList = service.includesReviews && (!customerState || !customerState.rows.length);
+    if (helpTopics.length && (!elements.form.checkValidity() || missingCustomerList)) {
+      elements.formStatus.textContent = 'Book a 15-minute call or call John now to finish the items you marked for help.';
+      elements.formStatus.classList.add('is-error');
+      elements.selectedHelpPanel.hidden = false;
+      elements.selectedHelpPanel.focus();
+      return;
+    }
     if (!elements.form.checkValidity()) {
       elements.form.reportValidity();
       return;
@@ -1073,7 +1276,7 @@
       const payload = buildSubmissionPayload();
       setSubmissionProgress(8, 'Checking the setup details', 'Nothing has been activated yet.');
       await sendCustomerBatches();
-      setSubmissionProgress(82, 'Sending the approved setup', 'Saving the business details and approval.');
+      setSubmissionProgress(82, 'Sending your setup for review', 'Saving the business details and your approval.');
       const response = await apiRequest('/v1/onboarding/submit', {
         method: 'POST',
         body: payload
@@ -1088,7 +1291,7 @@
     } finally {
       submitting = false;
       elements.submitButton.disabled = false;
-      elements.submitButton.textContent = 'Send the setup details';
+      elements.submitButton.textContent = 'Send to John for review';
     }
   }
 

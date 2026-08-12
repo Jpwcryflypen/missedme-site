@@ -183,6 +183,42 @@ test('builds the exact package-specific submit contracts', () => {
   assert.equal('googleReviewUrl' in voiceOnly, false);
 });
 
+test('offers plain review messages without making the client write one from scratch', () => {
+  const templates = onboarding.REVIEW_MESSAGE_TEMPLATES;
+  assert.deepEqual(templates.map(template => template.id), ['friendly', 'short']);
+  for (const template of templates) {
+    const message = template.copy('Example Plumbing');
+    assert.match(message, /Example Plumbing/);
+    assert.match(message, /honest Google review/);
+    assert.match(message, /\[Review link\]/);
+    assert.match(message, /Reply STOP to opt out\./);
+  }
+});
+
+test('the review setup has working self-serve and 15-minute help paths', () => {
+  const script = fs.readFileSync(path.join(projectRoot, 'onboard.js'), 'utf8');
+  const html = fs.readFileSync(path.join(projectRoot, 'start.html'), 'utf8');
+  const template = fs.readFileSync(path.join(projectRoot, 'customer-list-template.csv'), 'utf8');
+
+  assert.match(html, /Book a 15-minute setup call with John/);
+  assert.match(html, /Your business EIN/);
+  assert.match(html, /wherever you keep your customer names and contact information/);
+  assert.match(html, /You do not need to make or clean up a spreadsheet first/);
+  assert.match(html, /Pick a setup time/);
+  assert.match(html, /calendar\.google\.com\/calendar\/u\/0\/appointments\/schedules\//);
+  assert.match(html, /target="_blank" rel="noreferrer"/);
+  assert.match(html, /I will finish it myself/);
+  assert.doesNotMatch(html, /Setup progress/);
+  assert.match(script, /Google Business Profile link/);
+  assert.match(script, /I need help finding my Google listing/);
+  assert.match(script, /I want John to help me choose the message/);
+  assert.match(script, /I need help getting my customer list ready/);
+  assert.match(script, /customer-list-template\.csv/);
+  assert.doesNotMatch(script, /Eligible customer CSV/);
+  assert.doesNotMatch(script, /Exact review request you approve/);
+  assert.match(template, /^First Name,Last Name,Phone,Email/m);
+});
+
 test('static onboarding code has no sensitive fallback or browser persistence path', () => {
   const script = fs.readFileSync(path.join(projectRoot, 'onboard.js'), 'utf8');
   const html = fs.readFileSync(path.join(projectRoot, 'start.html'), 'utf8');

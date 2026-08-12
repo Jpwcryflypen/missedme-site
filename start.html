@@ -28,11 +28,6 @@
         <p class="eyebrow" id="serviceLabel">Secure client setup</p>
         <h1 id="welcomeHeadline">Checking your setup link.</h1>
         <p class="lead" id="welcomeLead">We are confirming that this private link belongs to your business.</p>
-        <div class="onboard-steps" id="onboardSteps" aria-label="Setup progress" hidden>
-          <div class="ob-step ob-now" data-step="details"><span>1</span> Add the setup details</div>
-          <div class="ob-step" data-step="review"><span>2</span> We review everything</div>
-          <div class="ob-step" data-step="approval"><span>3</span> We activate what you approved</div>
-        </div>
       </div>
     </section>
 
@@ -50,7 +45,33 @@
     </section>
 
     <div id="onboardingContent" hidden>
-      <section class="section onboard-what">
+      <section class="section setup-choice-section" id="setupChoiceSection">
+        <div class="container container-narrow">
+          <div class="setup-help-card">
+            <div>
+              <p class="eyebrow">Easiest setup option</p>
+              <h2>Book a 15-minute setup call with John</h2>
+              <p>John will go through the setup with you and help figure out anything you are missing.</p>
+              <div class="setup-ready-list">
+                <strong>Before the call, have these nearby:</strong>
+                <ul>
+                  <li>Your business EIN</li>
+                  <li>Access to wherever you keep your customer names and contact information</li>
+                </ul>
+                <p>You do not need to make or clean up a spreadsheet first.</p>
+              </div>
+              <p class="setup-call-note">If you are already on the phone with John, keep the call open and do the setup together.</p>
+            </div>
+            <div class="setup-help-actions">
+              <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0jRNOOvz_GRlmnzbWp2eSnuRK0T4iDfrh2thkws1MGvMqIq8_MWIYrbD9gp4po5RCk82L8PBTU" id="bookSetupHelp" target="_blank" rel="noreferrer">Pick a setup time</a>
+              <a class="btn btn-ghost" href="tel:+16234620164" id="callSetupHelp">Call John now</a>
+              <a class="setup-self-link" href="#send" id="selfServeSetup">I will finish it myself</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section onboard-what" id="onboardWhatSection">
         <div class="container container-narrow">
           <h2 id="overviewTitle">What we need from you</h2>
           <p class="section-sub" id="overviewText">Tell us what you have now. We will check it before anything is activated.</p>
@@ -58,7 +79,7 @@
         </div>
       </section>
 
-      <section class="section section-dark service-summary">
+      <section class="section section-dark service-summary" id="serviceSummarySection">
         <div class="container container-narrow">
           <p class="eyebrow eyebrow-light">What happens next</p>
           <h2 id="summaryTitle">We will prepare the setup for your approval.</h2>
@@ -68,8 +89,8 @@
 
       <section class="section onboard-form" id="send">
         <div class="container container-narrow">
-          <h2 id="formTitle">Add your setup details</h2>
-          <p class="section-sub" id="formIntro">This information is sent through your private setup session. It is not put in an email or saved in this browser.</p>
+          <h2 id="formTitle">Finish your setup</h2>
+          <p class="section-sub" id="formIntro">Fill in what you know. If you are missing something, use the help option in that section.</p>
 
           <form class="signup-form" id="onboardForm" autocomplete="off">
             <div class="invite-summary" aria-label="Setup link details">
@@ -78,6 +99,15 @@
             </div>
 
             <div id="serviceFields"></div>
+
+            <div class="selected-help-panel" id="selectedHelpPanel" role="status" tabindex="-1" hidden>
+              <strong>You picked something to finish with John.</strong>
+              <p id="selectedHelpText">Book a 15-minute call or call John now. Have your EIN and access to your customer list nearby. You do not need to make a spreadsheet first.</p>
+              <div class="selected-help-actions">
+                <a class="btn btn-primary btn-sm" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0jRNOOvz_GRlmnzbWp2eSnuRK0T4iDfrh2thkws1MGvMqIq8_MWIYrbD9gp4po5RCk82L8PBTU" target="_blank" rel="noreferrer">Book 15 minutes with John</a>
+                <a class="btn btn-ghost btn-sm" href="tel:+16234620164">Call John now</a>
+              </div>
+            </div>
 
             <div class="secure-handoff" id="privacyNotice">
               <strong>Your setup stays in this private session.</strong>
@@ -93,9 +123,9 @@
               <p id="progressText">Checking the details.</p>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-full" id="submitButton">Send the setup details</button>
+            <button type="submit" class="btn btn-primary btn-full" id="submitButton">Send to John for review</button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-            <p class="form-fine">If the connection stops, keep this page open and use Try again. Your entries stay only on this page until they are sent.</p>
+            <p class="form-fine">Nothing goes to your customers yet. John checks the setup and sends you a test first.</p>
           </form>
 
           <div class="success-banner onboarding-success" id="successBanner" role="status" tabindex="-1" hidden>
