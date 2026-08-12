@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Client setup | MissedMe</title>
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://onboard.missedme.ai; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com">
+  <title>Secure client setup | MissedMe</title>
   <meta name="description" content="Private setup page for new MissedMe clients.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,121 +17,123 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <span class="logo">missedme<span>.ai</span></span>
-      <a href="mailto:john@missedme.ai" class="btn btn-ghost btn-sm">Questions? Email John</a>
+      <a class="logo" href="/" aria-label="MissedMe home">missedme<span>.ai</span></a>
+      <a href="/" class="btn btn-ghost btn-sm">Back to MissedMe</a>
     </div>
   </header>
 
   <main>
     <section class="hero onboard-hero">
       <div class="container container-narrow">
-        <p class="eyebrow" id="serviceLabel">Google review setup</p>
-        <h1 id="welcomeHeadline">Let's get your review system set up.</h1>
-        <p class="lead" id="welcomeLead">Tell us where your customer information lives and how you want review requests handled. We will take it from there.</p>
-        <div class="onboard-steps" aria-label="Setup steps">
-          <div class="ob-step ob-now"><span>1</span> Send the setup details</div>
-          <div class="ob-step"><span>2</span> We review everything</div>
-          <div class="ob-step"><span>3</span> You approve the setup</div>
+        <p class="eyebrow" id="serviceLabel">Secure client setup</p>
+        <h1 id="welcomeHeadline">Checking your setup link.</h1>
+        <p class="lead" id="welcomeLead">We are confirming that this private link belongs to your business.</p>
+        <div class="onboard-steps" id="onboardSteps" aria-label="Setup progress" hidden>
+          <div class="ob-step ob-now" data-step="details"><span>1</span> Add the setup details</div>
+          <div class="ob-step" data-step="review"><span>2</span> We review everything</div>
+          <div class="ob-step" data-step="approval"><span>3</span> We activate what you approved</div>
         </div>
       </div>
     </section>
 
-    <section class="section onboard-what">
+    <section class="section onboarding-access" id="accessSection">
       <div class="container container-narrow">
-        <h2 id="overviewTitle">What we need from you</h2>
-        <p class="section-sub" id="overviewText">You do not need to organize everything before you start. Tell us what you have and where it lives. We will let you know if anything else is needed.</p>
-        <ul class="setup-needs" id="setupNeeds">
-          <li>Where your customer names, phone numbers, or emails are stored</li>
-          <li>Your Google Business Profile link</li>
-          <li>Who should approve the message before it goes out</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-dark service-summary">
-      <div class="container container-narrow">
-        <p class="eyebrow eyebrow-light">What happens next</p>
-        <h2 id="summaryTitle">We will prepare the review request for your approval.</h2>
-        <p class="section-sub" id="summaryText">Nothing goes out until you have seen the message and approved it.</p>
-      </div>
-    </section>
-
-    <section class="section onboard-form" id="send">
-      <div class="container container-narrow">
-        <h2 id="formTitle">Tell us how your customer information is set up</h2>
-        <p class="section-sub" id="formIntro">This form prepares an email to John. It does not upload anything to a third party.</p>
-
-        <form class="signup-form" id="onboardForm">
-          <input type="hidden" name="service" id="serviceField" value="reviews">
-
-          <div class="form-row">
-            <label>Your name
-              <input type="text" name="name" required autocomplete="name" placeholder="Mike Torres" id="nameField">
-            </label>
-            <label>Business name
-              <input type="text" name="business" required autocomplete="organization" placeholder="Torres Tree Care" id="bizField">
-            </label>
+        <div class="access-panel" id="accessPanel" role="status" aria-live="polite">
+          <span class="access-spinner" id="accessSpinner" aria-hidden="true"></span>
+          <div>
+            <h2 id="accessTitle">Checking your setup link</h2>
+            <p id="accessMessage">This should only take a moment.</p>
+            <button class="btn btn-primary btn-sm" id="accessRetry" type="button" hidden>Try again</button>
           </div>
-
-          <div class="form-row">
-            <label>Best phone for you
-              <input type="tel" name="phone" required autocomplete="tel" placeholder="(602) 555-0134">
-            </label>
-            <label>Best email for you
-              <input type="email" name="email" required autocomplete="email" placeholder="mike@example.com">
-            </label>
-          </div>
-
-          <div id="serviceFields"></div>
-
-          <label>Anything else we should know? <span class="label-opt">(optional)</span>
-            <textarea name="notes" rows="4" placeholder="Add anything that would help us understand your setup."></textarea>
-          </label>
-
-          <div class="email-handoff" id="attachmentNotice">
-            <strong>Have a customer list or another file to send?</strong>
-            <p>After you click the button, your email app will open with these details filled in. Attach the file there before you send it. This page does not upload or store your files.</p>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full" id="submitButton">Open the setup email</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          <p class="form-fine">If your email app does not open, email <a href="mailto:john@missedme.ai" id="emailFallback">john@missedme.ai</a> and include the details above.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section section-offer">
-      <div class="container container-narrow">
-        <div class="offer-box">
-          <p class="eyebrow eyebrow-light" id="promiseLabel">How we handle your customer information</p>
-          <h2 id="promiseTitle">Your customer information stays private.</h2>
-          <p class="offer-text" id="promiseText">We use it only to set up and run the service you asked for. We do not sell it or use it for another company.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container container-narrow">
-        <h2 id="nextTitle">What happens after you send the email</h2>
-        <ul class="check-list" id="nextSteps">
-          <li>We review your setup details and any files you attach.</li>
-          <li>We prepare the message and account setup.</li>
-          <li>You review and approve everything before it goes live.</li>
-        </ul>
-      </div>
-    </section>
+    <div id="onboardingContent" hidden>
+      <section class="section onboard-what">
+        <div class="container container-narrow">
+          <h2 id="overviewTitle">What we need from you</h2>
+          <p class="section-sub" id="overviewText">Tell us what you have now. We will check it before anything is activated.</p>
+          <ul class="setup-needs" id="setupNeeds"></ul>
+        </div>
+      </section>
+
+      <section class="section section-dark service-summary">
+        <div class="container container-narrow">
+          <p class="eyebrow eyebrow-light">What happens next</p>
+          <h2 id="summaryTitle">We will prepare the setup for your approval.</h2>
+          <p class="section-sub" id="summaryText">Nothing goes out until the required checks are complete.</p>
+        </div>
+      </section>
+
+      <section class="section onboard-form" id="send">
+        <div class="container container-narrow">
+          <h2 id="formTitle">Add your setup details</h2>
+          <p class="section-sub" id="formIntro">This information is sent through your private setup session. It is not put in an email or saved in this browser.</p>
+
+          <form class="signup-form" id="onboardForm" autocomplete="off">
+            <div class="invite-summary" aria-label="Setup link details">
+              <div><span>Business</span><strong id="inviteBusiness">Checking...</strong></div>
+              <div><span>Contact</span><strong id="inviteContact">Checking...</strong></div>
+            </div>
+
+            <div id="serviceFields"></div>
+
+            <div class="secure-handoff" id="privacyNotice">
+              <strong>Your setup stays in this private session.</strong>
+              <p id="privacyText">We do not put your EIN or customer list in a link, email, or browser storage. The customer file is read here, converted into the required contact fields, and then cleared from the file input.</p>
+            </div>
+
+            <div class="submit-progress" id="submitProgress" hidden>
+              <div class="progress-copy">
+                <strong id="progressTitle">Sending your setup</strong>
+                <span id="progressCount">0%</span>
+              </div>
+              <progress class="progress-track" id="progressTrack" aria-label="Setup submission progress" max="100" value="0">0%</progress>
+              <p id="progressText">Checking the details.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitButton">Send the setup details</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form-fine">If the connection stops, keep this page open and use Try again. Your entries stay only on this page until they are sent.</p>
+          </form>
+
+          <div class="success-banner onboarding-success" id="successBanner" role="status" tabindex="-1" hidden>
+            <h2 id="successTitle">We received your setup.</h2>
+            <p id="successMessage">John will review it and contact you if anything needs to be corrected before activation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-offer">
+        <div class="container container-narrow">
+          <div class="offer-box">
+            <p class="eyebrow eyebrow-light" id="promiseLabel">How we handle your information</p>
+            <h2 id="promiseTitle">Your information stays private.</h2>
+            <p class="offer-text" id="promiseText">We use it only to set up and run the service you asked for.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container container-narrow">
+          <h2 id="nextTitle">What happens after you send this</h2>
+          <ul class="check-list" id="nextSteps"></ul>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <span class="logo logo-footer">missedme<span>.ai</span></span>
+        <a class="logo logo-footer" href="/" aria-label="MissedMe home">missedme<span>.ai</span></a>
         <p>Practical systems that help local businesses follow up, get found, and stop losing good opportunities.</p>
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-        <a href="mailto:john@missedme.ai">Contact</a>
+        <a href="/">MissedMe home</a>
       </div>
     </div>
     <div class="container footer-legal">
