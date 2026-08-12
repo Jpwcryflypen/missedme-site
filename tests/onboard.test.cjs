@@ -202,8 +202,9 @@ test('the review setup has working self-serve and 15-minute help paths', () => {
 
   assert.match(html, /Book a 15-minute setup call with John/);
   assert.match(html, /Your business EIN/);
+  assert.match(html, /open the Google Business Profile for your business/);
   assert.match(html, /wherever you keep your customer names and contact information/);
-  assert.match(html, /You do not need to make or clean up a spreadsheet first/);
+  assert.match(html, /You do not need to make or clean up a spreadsheet first, and you will not give John your Google password/);
   assert.match(html, /Pick a setup time/);
   assert.match(html, /calendar\.google\.com\/calendar\/u\/0\/appointments\/schedules\//);
   assert.match(html, /target="_blank" rel="noreferrer"/);

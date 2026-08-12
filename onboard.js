@@ -993,7 +993,7 @@
     const topics = selectedHelpTopics();
     elements.selectedHelpPanel.hidden = topics.length === 0;
     if (!topics.length) return;
-    elements.selectedHelpText.textContent = `You asked for help with ${topics.join(', ')}. Book a 15-minute call or call John now. Have your EIN and access to your customer list nearby. You do not need to make a spreadsheet first.`;
+    elements.selectedHelpText.textContent = `You asked for help with ${topics.join(', ')}. Book a 15-minute call or call John now. Have your EIN, be able to open your Google Business Profile, and have access to your customer list. You do not need to make a spreadsheet first.`;
   }
 
   function wireReviewMessageChoices() {
